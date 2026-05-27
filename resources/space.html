@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Space Planning Mistakes That Affect Daily Living | Novelle Interiors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="https://lhinteriors.in/wp-content/uploads/2024/04/lh-only-300x300.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== RESET & ANIMATIONS ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #333333;
+            background: #ffffff;
+            overflow-x: hidden;
+            padding-top: 90px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ----- animations (identical to profile lighting page) ----- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.94);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+        }
+
+        .animate-fade-left {
+            animation: fadeInLeft 0.7s ease forwards;
+        }
+
+        .animate-fade-right {
+            animation: fadeInRight 0.7s ease forwards;
+        }
+
+        .animate-scale {
+            animation: scaleIn 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+        }
+
+        .stagger-item {
+            opacity: 0;
+        }
+
+        /* ===== NAVBAR (unchanged from given code) ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background-color: #FFFFFF;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0);
+        }
+
+        .site-header.scrolled {
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+            padding: 10px 0;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+            position: relative;
+            top: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-menu li a {
+            font-size: 13.3px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #211D1A;
+            letter-spacing: 0.1px;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li.active a {
+            color: #BF793B;
+        }
+
+        .nav-menu .menu-item-has-children {
+            position: relative;
+        }
+
+        .nav-menu .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 12px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .nav-menu .menu-item-has-children:hover>.sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-menu .sub-menu li a {
+            display: block;
+            padding: 8px 20px;
+            color: #333;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu .sub-menu li a:hover {
+            background: #f5f5f5;
+            color: #c6a43b;
+            padding-left: 25px;
+        }
+
+        .nav-menu .sub-menu .menu-item-has-children .sub-menu-level2 {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            min-width: 200px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 12px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu .sub-menu .menu-item-has-children:hover .sub-menu-level2 {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .nav-menu .fa-chevron-down,
+        .nav-menu .fa-chevron-right {
+            font-size: 12px;
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-menu .menu-item-has-children:hover>a .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.25px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #402F21;
+            color: #fff;
+        }
+
+        .collections-dropdown {
+            position: relative;
+        }
+
+        .collections-dropdown .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: #fff;
+            padding: 18px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            z-index: 999;
+        }
+
+        .collections-dropdown:hover .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .collections-dropdown .sub-menu li a {
+            display: block;
+            padding: 14px 24px;
+            color: #222;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .collections-dropdown .sub-menu li a:hover {
+            background: #f5f5f5;
+            color: #c58b55;
+            padding-left: 30px;
+        }
+
+        /* ===== HERO ===== */
+        .hero-space {
+            padding: 100px 20px 20px 20px;
+            text-align: center;
+        }
+
+        .space-centre {
+            width: fit-content;
+            text-align: center;
+            color: white;
+            background-color: #402F21;
+            padding: 4px 16px;
+            border-radius: 5px;
+            margin: 0 auto 20px auto;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .page-content-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 30px 80px;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .article-main {
+            transform: translateX(-80px);
+        }
+
+        .entry-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 55px;
+            font-weight: 400;
+            line-height: 1.25;
+            color: #1a1a1a;
+            margin-bottom: 28px;
+            letter-spacing: -0.3px;
+            text-align: center;
+        }
+
+        .post-thumbnail {
+            margin-bottom: 36px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .post-thumbnail img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            transition: transform 0.4s ease;
+        }
+
+        .post-thumbnail img:hover {
+            transform: scale(1.02);
+        }
+
+        .entry-content p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        .entry-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 42px 0 16px;
+            line-height: 1.3;
+            padding-bottom: 10px;
+        }
+
+        .entry-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 35px;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin: 28px 0 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .entry-content em {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-size: 17px;
+            line-height: 1.7;
+            margin: 28px 0;
+            border-left: 3px solid #c9a84c;
+            padding-left: 20px;
+            color: #4a4a4a;
+        }
+
+        .entry-content a {
+            color: #c98d4c;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.4);
+            transition: border-color 0.2s;
+        }
+
+        .entry-content strong {
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .entry-content ul {
+            list-style: none;
+            margin: 16px 0 24px;
+        }
+
+        .entry-content ul li {
+            position: relative;
+            padding: 10px 0 10px 22px;
+            font-size: 15px;
+            line-height: 1.75;
+            color: #4a4a4a;
+        }
+
+        .entry-content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 19px;
+            width: 5px;
+            height: 5px;
+            background: black;
+            border-radius: 50%;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .widget-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 20px;
+            padding: 2px;
+            background-color: #402F21;
+            width: 150px;
+            text-align: center;
+        }
+
+        .recent-post-item {
+            display: flex;
+            flex-direction: column;
+            padding: 14px 0;
+            text-decoration: none;
+            transition: transform 0.2s;
+            border-bottom: 1px solid #eee;
+        }
+
+        .recent-post-item:hover {
+            transform: translateX(6px);
+        }
+
+        .rp-meta {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            color: #B2B2B2;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .rp-title {
+            font-family: 'Montserrat', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.5;
+            transition: color 0.2s;
+        }
+
+        .rp-title:hover {
+            color: #c9a84c;
+        }
+
+        /* ===== QUOTE MODAL POPUP (same as other pages) ===== */
+        .quote-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .quote-modal-overlay.active {
+            display: flex;
+        }
+
+        .quote-modal {
+            display: flex;
+            background: #fff;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 860px;
+            max-height: 90vh;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .quote-modal-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #222;
+            z-index: 10;
+        }
+
+        .quote-modal-left {
+            width: 42%;
+            overflow: hidden;
+        }
+
+        .quote-modal-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quote-modal-right {
+            flex: 1;
+            padding: 48px 40px 40px;
+            overflow-y: auto;
+        }
+
+        .quote-modal-right h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .quote-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .quote-form input,
+        .quote-form textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 14px 16px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            outline: none;
+        }
+
+        .quote-send-btn {
+            width: 100%;
+            background: #111;
+            color: #fff;
+            border: none;
+            padding: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .quote-send-btn:hover {
+            background: #333;
+        }
+
+        @media (max-width: 640px) {
+            .quote-modal {
+                flex-direction: column;
+                max-height: 95vh;
+            }
+
+            .quote-modal-left {
+                width: 100%;
+                height: 180px;
+            }
+
+            .quote-modal-right {
+                padding: 30px 24px 28px;
+            }
+
+            .quote-modal-right h2 {
+                font-size: 26px;
+            }
+        }
+
+        /* ===== FOOTER & CTA ===== */
+        .footer-cta {
+            background-image: url('https://lhinteriors.in/wp-content/uploads/2024/04/lh-footer-bg-e1712915590732.webp');
+            background-size: cover;
+            background-position: right bottom;
+            background-color: #F8F8F8;
+            padding: 60px 20px;
+        }
+
+        .cta-title {
+            color: #1a1a1a;
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .cta-text {
+            color: #333;
+            padding-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .contactus {
+            color: white;
+            text-transform: uppercase;
+            background-color: black;
+            padding: 20px 30px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contactus:hover {
+            background-color: #402F21;
+            transform: translateY(-3px);
+        }
+
+        .footer-main {
+            background-color: #211D1A;
+            color: #fff;
+            padding: 60px 0 40px;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .footer-logo img {
+            filter: invert(1);
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #ddd;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #BF793B;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: transform 0.2s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #BF793B;
+            transform: translateY(-3px);
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 12px;
+        }
+
+        .footer-col p i {
+            margin-right: 8px;
+            color: #BF793B;
+        }
+
+        .copyright {
+            border-top: 1px dashed #402F21;
+            padding-top: 30px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9999;
+            width: 56px;
+            height: 56px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: #ffffff;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .page-content-wrap {
+                grid-template-columns: 1fr 300px;
+                gap: 40px;
+            }
+
+            .entry-title {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background: #fff;
+                width: 80%;
+                height: calc(100% - 80px);
+                flex-direction: column;
+                padding: 40px 20px;
+                transition: 0.3s;
+                overflow-y: auto;
+                z-index: 100;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu .sub-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                display: none;
+                box-shadow: none;
+                padding-left: 20px;
+            }
+
+            .nav-menu .menu-item-has-children.active-dropdown>.sub-menu {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-content-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .entry-title {
+                font-size: 32px;
+            }
+
+            .article-main {
+                transform: translateX(0);
+            }
+
+            .hero-space {
+                padding: 80px 20px 20px;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+            }
+
+            .copyright {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="mainHeader">
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="..\assets\logo.jpg" alt="Novelle Interiors Logo">
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design.html">Design Ideas</a></li>
+                <li class="menu-item-has-children collections-dropdown">
+                    <a href="../collections.html">
+                        Collections <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="sub-menu collections-menu">
+                        <li><a href="../livingroom.html">Living Room</a></li>
+                        <li><a href="../bedroom.html">Bedroom</a></li>
+                        <li><a href="../dining.html">Dining</a></li>
+                        <li><a href="../kitchen.html">Kitchen</a></li>
+                        <li><a href="../accents.html">Accent</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="../projects.html">Projects <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sub-menu">
+                        <li class="menu-item-has-children">
+                            <a href="#">The Opulent Oasis <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="#">Architecture</a></li>
+                                <li><a href="#">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/dsr.html">DSR Farmhouse <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/dsr.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/ciro.html">CIRO Pharma <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/ciro.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/alais.html">Alais Home Solutions <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/alais.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/manor.html">Modern Manor <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/manor.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/slate.html">The Slate House <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/slate.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/panacea.html">Panacea Hospital Design <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/panacea.html">Exterior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/blues.html">The Design Blues <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/blues.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/harmony.html">The Harmony Home <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/harmony.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/farmhouse.html">Bhaskaram Farmhouse <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/farmhouse.html">Architecture</a></li>
+                                <li><a href="../projects/farmhouse.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/dsrhosp.html">DSR Charitable Hospitals <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/dsrhosp.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/min.html">Minimal Charm <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/min.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/aiva.html">Hotel Aiva Gachibowli <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/aiva.html">Architecture</a></li>
+                                <li><a href="../projects/aiva.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <a href="#" class="btn-primary quote-btn" id="openQuoteBtn">Get a quote</a>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <div class="hero-space">
+        <div class="space-centre"><a href="https://lhinteriors.in/category/space-planning/" style="color:white;">SPACE
+                PLANNING</a></div>
+        <h1 class="entry-title animate-fade-up">Space Planning Mistakes That Affect Daily Living</h1>
+        <div class="post-thumbnail animate-scale">
+            <img src="https://lhinteriors.in/wp-content/uploads/2026/05/Planning-Mistakes.webp"
+                alt="Confusing room layout with poor furniture placement" />
+        </div>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="page-content-wrap">
+        <main class="article-main">
+            <div class="entry-content">
+                <p class="stagger-item animate-fade-left">Has your home ever felt off, even though you cannot explain
+                    exactly why?</p>
+                <p class="stagger-item animate-fade-right">The walls are painted nicely. The furniture is good quality.
+                    The kitchen tiles look great. But something about the home just does not feel right. Things are hard
+                    to find. Moving from one room to another feels awkward. The living room is big but uncomfortable to
+                    sit in. The bedroom is fine but never feels restful.</p>
+                <p class="stagger-item animate-fade-left">In most cases, the problem is not the furniture or the paint
+                    colour. The problem is the space planning — the way the rooms are laid out and organised before
+                    anything else goes in.</p>
+                <p class="stagger-item animate-fade-right">Space planning is one of the most important parts of home
+                    design. And it is also one of the most commonly misunderstood. Most homeowners focus on what goes
+                    inside a room — the sofa, the wardrobe, the dining table. But how the room is arranged — and how
+                    much space is left to move around in — that is what determines how easy and comfortable a home
+                    actually is to live in.</p>
+                <p class="stagger-item animate-fade-left">This blog covers the most common space planning mistakes that
+                    affect daily life at home. Understanding these planning mistakes can help you avoid them, whether
+                    you are designing a new home or trying to figure out why your current one does not feel quite right.
+                </p>
+
+                <h2 class="stagger-item animate-fade-up">Mistake 1: Buying Furniture Before Planning the Room</h2>
+                <p class="stagger-item animate-fade-right">This is the most common space planning mistake of all. You
+                    visit a showroom, fall in love with a sofa, buy it, bring it home — and then realise it does not fit
+                    the way you imagined. Maybe it blocks the natural path or makes the room feel tight.</p>
+                <p class="stagger-item animate-fade-left">These problems are difficult to fix once furniture is in
+                    place. They affect how the room feels every day.</p>
+                <p class="stagger-item animate-fade-right"><strong>How to avoid:</strong> Always plan the room layout
+                    before you buy anything. Measure carefully, mark doors/windows, and decide where main pieces will
+                    go. Leave at least 90cm of clear walkway between furniture.</p>
+                <em class="stagger-item animate-scale">The room you plan on paper is the room you will live in every
+                    day. Plan it before you shop — not after.</em>
+
+                <h2 class="stagger-item animate-fade-up">Mistake 2: Not Leaving Enough Space to Move Around</h2>
+                <p class="stagger-item animate-fade-left">Rooms feel small either because the room is small, or because
+                    there is not enough clear space to move. Too much furniture makes any room feel cramped, even a
+                    large one.</p>
+                <p class="stagger-item animate-fade-right">Clear floor space is what makes a room feel open and
+                    comfortable — it is not wasted, it is essential. Decide on main furniture pieces first, then add
+                    only what is needed. It is easier to add later than to remove.</p>
+
+                <h2 class="stagger-item animate-fade-up">Mistake 3: Storage That Is Planned Too Late</h2>
+                <p class="stagger-item animate-fade-left">Storage is often an afterthought. By the time it is
+                    considered, walls are finished and good options are gone. Result: visible clutter, shoes near doors,
+                    clothes on chairs.</p>
+                <p class="stagger-item animate-fade-right"><strong>Fix:</strong> Plan storage before anything else.
+                    Built-in wardrobes, floor-to-ceiling cabinets, under-stair drawers — these work best when designed
+                    into the room from day one. Storage planned at the end always looks like an add‑on.</p>
+
+                <h2 class="stagger-item animate-fade-up">Mistake 4: Ignoring the Natural Flow of the Home</h2>
+                <p class="stagger-item animate-fade-left">Every home has a natural flow: bedroom to bathroom, front door
+                    to kitchen, kitchen to dining. When layout works with this movement, home feels effortless. When it
+                    works against it, home feels frustrating.</p>
+                <p class="stagger-item animate-fade-right">Think through a typical day. The answers should shape how
+                    rooms are positioned and connected. This is what separates an easy home from one that constantly
+                    requires extra effort.</p>
+
+                <h2 class="stagger-item animate-fade-up">Mistake 5: Poor Lighting Planning</h2>
+                <p class="stagger-item animate-fade-left">Lighting is often the last thing planned — a big mistake. Once
+                    walls are finished, options are limited. Poor lighting makes rooms harder to use: shadows in the
+                    kitchen, a bedroom that never feels restful.</p>
+                <p class="stagger-item animate-fade-right"><strong>Solution:</strong> Plan during construction. Think in
+                    three layers: background light, task lighting, accent lighting. A detailed lighting plan makes an
+                    enormous difference to how every room feels.</p>
+
+                <h2 class="stagger-item animate-fade-up">Mistake 6: Open-Plan Spaces With No Defined Zones</h2>
+                <p class="stagger-item animate-fade-left">Open-plan layouts look spacious, but without careful planning
+                    they become chaotic. One large undefined space feels purposeless. Kitchen noise bleeds into
+                    relaxation area.</p>
+                <p class="stagger-item animate-fade-right">You don't need walls: a rug defines the living zone, a
+                    pendant light marks the dining area, furniture placement creates soft separation. Each zone gets its
+                    own identity.</p>
+                <em class="stagger-item animate-scale">An open-plan space without zones does not feel free. It just
+                    feels confused. Good planning gives each area its own purpose without a single wall.</em>
+
+                <h2 class="stagger-item animate-fade-up">Mistake 7: Designing for Looks Instead of for Life</h2>
+                <p class="stagger-item animate-fade-left">Designing based on photos rather than real life. A beautiful
+                    dining table that makes it hard to get in and out of chairs. Open shelving that becomes hard to keep
+                    tidy.</p>
+                <p class="stagger-item animate-fade-right">Every space planning decision should start with: how will
+                    this room actually be used? Design around real life, and the room will work better — and look better
+                    too.</p>
+
+                <h2 class="stagger-item animate-fade-up">Good Space Planning Is the Foundation of a Good Home</h2>
+                <p class="stagger-item animate-fade-left">Every mistake here happens when space planning is rushed or
+                    done after everything else. You don't see it in final photos, but you feel it every day: in how easy
+                    it is to move, how quickly you find things, how restful the bedroom is at night.</p>
+                <p class="stagger-item animate-fade-right">The homes that feel truly wonderful are the ones where space
+                    was planned carefully before anything else. Layout thought through. Storage built in from the start.
+                    Lighting positioned properly. Flow between rooms considered.</p>
+                <p class="stagger-item animate-fade-left">At Novelle Interiors, we believe the best design decisions are
+                    made early. Whether you are building new, renovating, or wondering why your current home feels
+                    harder than it should — we would love to help.</p>
+                <p class="stagger-item animate-fade-right">A home that is well planned feels effortless to live in. A
+                    home that is not planned well reminds you of that every day. Let Novelle Interiors help you get the
+                    planning right from the very beginning.</p>
+                <p class="stagger-item animate-fade-left">Get in touch with Novelle Interiors today. We are here to
+                    help.</p>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h6 class="widget-title">Recent News</h6>
+                <div class="recent-posts-list">
+                    <a href="#" class="recent-post-item"><span class="rp-title">Stunning Parallel Kitchen Design
+                            Ideas</span><span class="rp-meta">May 20, 2026 · Kitchen</span></a>
+                    <a href="#" class="recent-post-item"><span class="rp-title">Beautiful Mandir Design Ideas for
+                            Home</span><span class="rp-meta">May 18, 2026 · Pooja Unit</span></a>
+                    <a href="#" class="recent-post-item"><span class="rp-title">Wooden Wall Panel Designs That Transform
+                            Any Room</span><span class="rp-meta">May 16, 2026 · Interior Design</span></a>
+                    <a href="#" class="recent-post-item"><span class="rp-title">Beautiful Profile Lighting Ideas That
+                            Instantly Upgrade Any Room</span><span class="rp-meta">May 16, 2026 · Lighting</span></a>
+                    <a href="#" class="recent-post-item"><span class="rp-title">Space Planning Mistakes That Affect
+                            Daily Living</span><span class="rp-meta">May 7, 2026 · Space Planning</span></a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ===== FOOTER CTA ===== -->
+    <div class="footer-cta">
+        <div class="container">
+            <h2 class="cta-title">Have a project in<br>mind?</h2>
+            <p class="cta-text">Ready to transform your space? Let's turn your vision into reality. Contact us now to
+                discuss your interior design project and bring your ideas to life!</p>
+            <a href="#" class="contactus" id="footerCtaBtn">Contact Us <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><img src="..\assets\logo.jpg" alt="Novelle Interiors"></div>
+                    <p>Novelle Interiors helps people create beautiful interiors with the utmost quality. With nearly 14
+                        years of experience.</p>
+                    <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                                class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="../livingroom.html">Living Room</a></li>
+                        <li><a href="../bedroom.html">Bedroom</a></li>
+                        <li><a href="../dining.html">Dining</a></li>
+                        <li><a href="../kitchen.html">Kitchen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Office</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Kondapur, Hyderabad, Telangana</p>
+                    <p><i class="far fa-envelope-open"></i> sales@novelleinteriors.in</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 90004 77756</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2025 Novelle Interiors. All Rights Reserved.</p>
+                <div><a href="#">Privacy Policies</a> | <a href="#">Terms</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/919000477756" class="whatsapp-float" target="_blank"><svg viewBox="0 0 32 32" fill="white">
+            <path
+                d="M16.004 0C7.164 0 0 7.164 0 16.004c0 2.824.738 5.482 2.027 7.789L0 32l8.418-2.004c2.219 1.156 4.742 1.816 7.418 1.816C24.84 31.812 32 24.648 32 15.812 32 7.164 24.84 0 16.004 0zm0 29.094c-2.445 0-4.73-.656-6.703-1.797l-.48-.285-4.973 1.184 1.262-4.844-.316-.5C3.563 20.824 2.719 18.504 2.719 16c0-7.324 5.961-13.281 13.285-13.281 7.32 0 13.277 5.957 13.277 13.281 0 7.32-5.957 13.094-13.277 13.094z" />
+        </svg></a>
+
+    <!-- ===== QUOTE MODAL POPUP (same as other pages) ===== -->
+    <div class="quote-modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-label="Get a quote">
+        <div class="quote-modal">
+            <button class="quote-modal-close" id="closeQuoteBtn" aria-label="Close">&times;</button>
+            <div class="quote-modal-left">
+                <img src="https://lhinteriors.in/wp-content/uploads/2024/04/dining-room-services3.webp"
+                    alt="Luxury Interior">
+            </div>
+            <div class="quote-modal-right">
+                <h2>Get a quote</h2>
+                <div class="quote-form">
+                    <input type="text" id="q-name" placeholder="Name" autocomplete="name">
+                    <input type="tel" id="q-phone" placeholder="Phone Number" autocomplete="tel">
+                    <input type="email" id="q-email" placeholder="Email" autocomplete="email">
+                    <input type="text" id="q-budget" placeholder="Budget">
+                    <textarea id="q-message" placeholder="Message" rows="4"></textarea>
+                    <button class="quote-send-btn" id="quoteSendBtn">SEND</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (menuToggle) menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+        document.querySelectorAll('.nav-menu a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+
+        // Sticky header
+        window.addEventListener('scroll', () => { const header = document.getElementById('mainHeader'); if (window.scrollY > 10) header.classList.add('scrolled'); else header.classList.remove('scrolled'); });
+
+        // Mobile dropdown
+        if (window.innerWidth <= 992) {
+            document.querySelectorAll('.nav-menu .menu-item-has-children > a').forEach(item => {
+                item.addEventListener('click', (e) => { e.preventDefault(); item.closest('.menu-item-has-children')?.classList.toggle('active-dropdown'); });
+            });
+        }
+
+        // QUOTE MODAL LOGIC (same as other pages)
+        const openQuoteBtn = document.getElementById('openQuoteBtn');
+        const footerCtaBtn = document.getElementById('footerCtaBtn');
+        const quoteModal = document.getElementById('quoteModal');
+        const closeQuoteBtn = document.getElementById('closeQuoteBtn');
+        const quoteSendBtn = document.getElementById('quoteSendBtn');
+
+        function openModal() {
+            if (quoteModal) {
+                quoteModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        function closeModal() {
+            if (quoteModal) {
+                quoteModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        if (openQuoteBtn) openQuoteBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+        if (footerCtaBtn) footerCtaBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+        if (closeQuoteBtn) closeQuoteBtn.addEventListener('click', closeModal);
+        if (quoteModal) {
+            quoteModal.addEventListener('click', (e) => { if (e.target === quoteModal) closeModal(); });
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && quoteModal && quoteModal.classList.contains('active')) closeModal();
+        });
+        if (quoteSendBtn) {
+            quoteSendBtn.addEventListener('click', () => {
+                const name = document.getElementById('q-name')?.value.trim();
+                const phone = document.getElementById('q-phone')?.value.trim();
+                const email = document.getElementById('q-email')?.value.trim();
+                if (!name || !phone || !email) {
+                    alert('Please fill in Name, Phone, and Email.');
+                    return;
+                }
+                alert('Thank you! We will get back to you shortly.');
+                closeModal();
+            });
+        }
+
+        // Intersection Observer for stagger animations (same as previous)
+        const animatedElements = document.querySelectorAll('.stagger-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    if (el.classList.contains('animate-fade-left')) el.style.animation = 'fadeInLeft 0.7s ease forwards';
+                    else if (el.classList.contains('animate-fade-right')) el.style.animation = 'fadeInRight 0.7s ease forwards';
+                    else if (el.classList.contains('animate-fade-up')) el.style.animation = 'fadeInUp 0.8s ease forwards';
+                    else if (el.classList.contains('animate-scale')) el.style.animation = 'scaleIn 0.6s ease forwards';
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.1 });
+        animatedElements.forEach(el => observer.observe(el));
+        document.querySelectorAll('.entry-content h2, .entry-content h3, .entry-content em').forEach(el => { if (!el.classList.contains('stagger-item')) observer.observe(el); });
+    </script>
+</body>
+
+</html>

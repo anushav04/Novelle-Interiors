@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beautiful Mandir Design Ideas for Home | Novelle Interiors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="https://lhinteriors.in/wp-content/uploads/2024/04/lh-only-300x300.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #333333;
+            background: #ffffff;
+            overflow-x: hidden;
+            padding-top: 90px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ===== NEW NAVBAR STYLES ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background-color: #FFFFFF;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0);
+        }
+
+        .site-header.scrolled {
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+            padding: 10px 0;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+            position: relative;
+            top: 10px;
+        }
+
+        /* Dropdown Menu Styles */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-menu li a {
+            font-size: 13.3px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #211D1A;
+            letter-spacing: 0.1px;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li.active a {
+            color: #BF793B;
+        }
+
+        .nav-menu .menu-item-has-children {
+            position: relative;
+        }
+
+        .nav-menu .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 12px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            list-style: none;
+        }
+
+        .nav-menu .menu-item-has-children:hover>.sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-menu .sub-menu li {
+            position: relative;
+        }
+
+        .nav-menu .sub-menu li a {
+            display: block;
+            padding: 8px 20px;
+            color: #333;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu .sub-menu li a:hover {
+            background: #f5f5f5;
+            color: #c6a43b;
+            padding-left: 25px;
+        }
+
+        /* Level 2 Dropdown */
+        .nav-menu .sub-menu .menu-item-has-children .sub-menu-level2 {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            min-width: 200px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 12px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu .sub-menu .menu-item-has-children:hover .sub-menu-level2 {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .nav-menu .fa-chevron-down,
+        .nav-menu .fa-chevron-right {
+            font-size: 12px;
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-menu .menu-item-has-children:hover>a .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.25px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #402F21;
+            color: #fff;
+        }
+
+        /* COLLECTIONS DROPDOWN */
+        .collections-dropdown {
+            position: relative;
+        }
+
+        .collections-dropdown .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: #fff;
+            padding: 18px 0;
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            z-index: 999;
+        }
+
+        .collections-dropdown:hover .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .collections-dropdown .sub-menu li a {
+            display: block;
+            padding: 14px 24px;
+            color: #222;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .collections-dropdown .sub-menu li a:hover {
+            background: #f5f5f5;
+            color: #c58b55;
+            padding-left: 30px;
+        }
+
+        .collections-dropdown>a i {
+            margin-left: 6px;
+            font-size: 12px;
+        }
+
+        /* ===== HERO & BREADCRUMB ===== */
+        .hero-mandir {
+            padding: 100px 20px 20px 20px;
+            text-align: center;
+        }
+
+        .mandir-centre {
+            width: fit-content;
+            text-align: center;
+            color: white;
+            background-color: #402F21;
+            padding: 4px 16px;
+            border-radius: 5px;
+            margin: 0 auto 20px auto;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        /* ===== MAIN CONTENT AREA ===== */
+        .page-content-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 30px 80px;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .article-main {
+            transform: translateX(-80px);
+        }
+
+        .entry-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 55px;
+            font-weight: 400;
+            line-height: 1.25;
+            color: #1a1a1a;
+            margin-bottom: 28px;
+            letter-spacing: -0.3px;
+            text-align: center;
+        }
+
+        .post-thumbnail {
+            margin-bottom: 36px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .post-thumbnail img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .entry-content p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        .entry-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 42px 0 16px;
+            line-height: 1.3;
+            padding-bottom: 10px;
+        }
+
+        .entry-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 35px;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin: 28px 0 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .entry-content em {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-size: 17px;
+            line-height: 1.7;
+            margin: 28px 0;
+            border-left: 3px solid #c9a84c;
+            padding-left: 20px;
+            color: #4a4a4a;
+        }
+
+        .entry-content a {
+            color: #c98d4c;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.4);
+            transition: border-color 0.2s;
+        }
+
+        .entry-content a:hover {
+            border-color: #c9a84c;
+        }
+
+        .entry-content strong {
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .entry-content ul {
+            list-style: none;
+            margin: 16px 0 24px;
+            padding: 0;
+        }
+
+        .entry-content ul li {
+            position: relative;
+            padding: 10px 0 10px 22px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            line-height: 1.75;
+            color: #4a4a4a;
+        }
+
+        .entry-content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .entry-content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 19px;
+            width: 5px;
+            height: 5px;
+            background: black;
+            border-radius: 50%;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .widget-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 20px;
+            padding: 2px;
+            background-color: #402F21;
+            width: 150px;
+            text-align: center;
+        }
+
+        .recent-post-item {
+            display: flex;
+            flex-direction: column;
+            padding: 14px 0;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+        }
+
+        .recent-post-item:last-child {
+            border-bottom: none;
+        }
+
+        .rp-meta {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            color: #B2B2B2;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .rp-title {
+            font-family: 'Montserrat', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.5;
+            transition: color 0.2s;
+        }
+
+        .rp-title:hover {
+            color: #c9a84c;
+        }
+
+        /* ===== QUOTE MODAL POPUP (same as other pages) ===== */
+        .quote-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .quote-modal-overlay.active {
+            display: flex;
+        }
+
+        .quote-modal {
+            display: flex;
+            background: #fff;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 860px;
+            max-height: 90vh;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .quote-modal-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #222;
+            z-index: 10;
+        }
+
+        .quote-modal-left {
+            width: 42%;
+            overflow: hidden;
+        }
+
+        .quote-modal-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quote-modal-right {
+            flex: 1;
+            padding: 48px 40px 40px;
+            overflow-y: auto;
+        }
+
+        .quote-modal-right h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 28px;
+        }
+
+        .quote-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .quote-form input,
+        .quote-form textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 14px 16px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            outline: none;
+        }
+
+        .quote-send-btn {
+            width: 100%;
+            background: #111;
+            color: #fff;
+            border: none;
+            padding: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .quote-send-btn:hover {
+            background: #333;
+        }
+
+        @media (max-width: 640px) {
+            .quote-modal {
+                flex-direction: column;
+                max-height: 95vh;
+            }
+
+            .quote-modal-left {
+                width: 100%;
+                height: 180px;
+            }
+
+            .quote-modal-right {
+                padding: 30px 24px 28px;
+            }
+
+            .quote-modal-right h2 {
+                font-size: 26px;
+            }
+        }
+
+        /* ===== FOOTER & CTA ===== */
+        .footer-cta {
+            background-image: url('https://lhinteriors.in/wp-content/uploads/2024/04/lh-footer-bg-e1712915590732.webp');
+            background-size: cover;
+            background-position: right bottom;
+            background-color: #F8F8F8;
+            padding: 60px 20px;
+        }
+
+        .cta-title {
+            color: white;
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .cta-text {
+            color: white;
+            padding-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .contactus {
+            color: white;
+            text-transform: uppercase;
+            background-color: black;
+            padding: 20px 30px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .contactus:hover {
+            background-color: #402F21;
+        }
+
+        .footer-main {
+            background-color: #211D1A;
+            color: #fff;
+            padding: 60px 0 40px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .footer-logo img {
+            filter: invert(1);
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.15px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #ddd;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #BF793B;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #BF793B;
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 12px;
+        }
+
+        .footer-col p i {
+            margin-right: 8px;
+            color: #BF793B;
+        }
+
+        .copyright {
+            border-top: 1px dashed #402F21;
+            padding-top: 30px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9999;
+            width: 56px;
+            height: 56px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: #ffffff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .page-content-wrap {
+                grid-template-columns: 1fr 300px;
+                gap: 40px;
+            }
+
+            .entry-title {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background: #fff;
+                width: 80%;
+                height: calc(100% - 80px);
+                flex-direction: column;
+                padding: 40px 20px;
+                transition: 0.3s;
+                overflow-y: auto;
+                gap: 15px;
+                z-index: 100;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu .sub-menu,
+            .nav-menu .sub-menu .sub-menu-level2 {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                display: none;
+                box-shadow: none;
+                padding-left: 20px;
+            }
+
+            .nav-menu .menu-item-has-children.active-dropdown>.sub-menu {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-content-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .entry-title {
+                font-size: 32px;
+            }
+
+            .article-main {
+                transform: translateX(0);
+            }
+
+            .page-content-wrap {
+                padding: 20px 20px 60px;
+            }
+
+            .hero-mandir {
+                padding: 80px 20px 20px;
+            }
+
+            .cta-title {
+                font-size: 36px;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="mainHeader">
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="..\assets\logo.jpg" alt="Novelle Interiors Logo">
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design.html">Design Ideas</a></li>
+                <li class="menu-item-has-children collections-dropdown">
+                    <a href="../collections.html">
+                        Collections <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="sub-menu collections-menu">
+                        <li><a href="../livingroom.html">Living Room</a></li>
+                        <li><a href="../bedroom.html">Bedroom</a></li>
+                        <li><a href="../dining.html">Dining</a></li>
+                        <li><a href="../kitchen.html">Kitchen</a></li>
+                        <li><a href="../accents.html">Accent</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="../projects.html">Projects <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sub-menu">
+                        <li class="menu-item-has-children">
+                            <a href="#">The Opulent Oasis <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="#">Architecture</a></li>
+                                <li><a href="#">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/dsr.html">DSR Farmhouse <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/dsr.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/ciro.html">CIRO Pharma <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/ciro.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/alais.html">Alais Home Solutions <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/alais.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/manor.html">Modern Manor <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/manor.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/slate.html">The Slate House <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/slate.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/panacea.html">Panacea Hospital Design <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/panacea.html">Exterior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/blues.html">The Design Blues <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/blues.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/harmony.html">The Harmony Home <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/harmony.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/farmhouse.html">Bhaskaram Farmhouse <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/farmhouse.html">Architecture</a></li>
+                                <li><a href="../projects/farmhouse.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/dsrhosp.html">DSR Charitable Hospitals <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/dsrhosp.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/min.html">Minimal Charm <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/min.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="../projects/aiva.html">Hotel Aiva Gachibowli <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="../projects/aiva.html">Architecture</a></li>
+                                <li><a href="../projects/aiva.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <a href="#" class="btn-primary quote-btn" id="openQuoteBtn">Get a quote</a>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <div class="hero-mandir">
+        <div class="mandir-centre"><a href="https://lhinteriors.in/category/pooja-unit/" style="color:white;">POOJA
+                UNIT</a></div>
+        <h1 class="entry-title">Beautiful Mandir Design Ideas for Home</h1>
+        <div class="post-thumbnail">
+            <img src="https://lhinteriors.in/wp-content/uploads/2026/05/Mandir-Design.webp"
+                alt="Elegant wooden mandir design with warm lighting" />
+        </div>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="page-content-wrap">
+        <main class="article-main">
+            <div class="entry-content">
+                <p>In most Indian homes, the prayer space is the first place people visit in the morning. Before tea.
+                    Before checking the phone. Before anything else.</p>
+                <p>That small moment of quiet sets the tone for the whole day. It is one of the most important corners
+                    of a home and yet, it is also one of the most overlooked when it comes to design.</p>
+                <p>Most prayer spaces end up wherever there is room. A shelf. A small cabinet in the kitchen. A corner
+                    that seemed convenient at the time. It works. But it does not feel the way it should.</p>
+                <p>A well-thought-out prayer space does not need to be large or expensive. It just needs care. The right
+                    spot. The right size. The right light. When these come together, this corner of the home becomes one
+                    of the most beautiful and calming spaces in the whole house.</p>
+                <p>This blog shares some of the best mandir design ideas for home covering different sizes, styles, and
+                    budgets explained simply so you can find the right fit for your own space.</p>
+
+                <h2>First, Where Should It Go?</h2>
+                <p>Before thinking about how it will look, the first step is deciding where it should be placed. This
+                    matters more than most people realise.</p>
+                <p>Many Indian families follow Vastu when choosing the placement. Vastu is a traditional set of
+                    guidelines about direction and layout in a home. According to Vastu, the north-east corner is the
+                    best spot for a prayer space. The east and north walls are also considered good options.</p>
+                <p>There are also a few places to avoid. It should not be placed on the wall of a bathroom. It should
+                    not go under a staircase. And most designers suggest keeping it away from the bedroom if possible —
+                    the bedroom is for rest, and a prayer space there can sometimes be harder to maintain properly.</p>
+                <p>In flats and smaller homes, getting the exact right direction is not always possible. That is
+                    completely fine. A clean, well-lit wall with some open space in front of it works beautifully. What
+                    matters most is that it feels like a proper, dedicated spot — not an afterthought.</p>
+                <em>The best place for a prayer space is one that is clean, well-lit, and treated with care every day.
+                    Direction matters but attention matters more.</em>
+
+                <h2>Mandir Design Options That Work in Indian Homes</h2>
+                <h3>1. A full pooja room</h3>
+                <p>If the home has space for it, a full pooja room is the most special option of all. It gives the
+                    prayer space its own room completely separate from the rest of the house.</p>
+                <p>It does not need to be large. Even a small room of 5 to 6 square feet can be made very beautiful. The
+                    walls can be done in white marble or light stone. The floor can have a different tile to show that
+                    it is a different kind of space. A low wooden step at the entrance and a platform for the idol shelf
+                    add a traditional, temple-like quality.</p>
+                <p>Simple carved wooden doors or a screen at the entrance make the whole thing feel special. When you
+                    step through, you immediately feel that you have entered a quieter, more peaceful place. That
+                    transition is one of the things that makes a full pooja room so meaningful.</p>
+
+                <h3>2. A built-in unit in the living room</h3>
+                <p>In most homes especially flats — a full room is not possible. A built-in unit in the living room is
+                    the most popular and practical choice instead.</p>
+                <p>This type of unit is made as part of the wall. It has a shelf for the idols, a softly lit space
+                    behind them, and a small cabinet below for storing pooja items. It can be designed to match the rest
+                    of the living room, or it can use a different material, like warm wood or white marble, to clearly
+                    mark it as a special space.</p>
+                <p>Mandir Design is one of the most asked-for design features – Interior Designers Hyderabad. Families
+                    want a prayer space that is beautiful, stays organised, and fits naturally into the home.</p>
+
+                <h3>3. A wall-mounted unit for small spaces</h3>
+                <p>For smaller flats where floor space is tight, a wall-mounted unit is a smart and practical choice. It
+                    is fixed to the wall at a comfortable height around chest or eye level and sticks out just enough to
+                    hold the idols and a few small items.</p>
+                <p>It can be made from wood, marble, or a combination of both. A small arch above the shelf gives it a
+                    traditional look. A drawer or shelf below keeps things like incense, diyas, and flowers in one neat
+                    place. When it is well-made and placed on a clean wall with good light, it feels proper and
+                    beautiful — not like a compromise.</p>
+
+                <h3>4. A section within a larger storage wall</h3>
+                <p>In modern homes that want a clean, minimal look throughout, the prayer space is sometimes built into
+                    a larger storage wall. One part of the main living room unit or the hallway wall is set aside for
+                    it.</p>
+                <p>That section is made to stand out clearly using a different finish, a wooden arch, or soft lighting
+                    around it. Everything else in the unit stays plain and calm. This gives the prayer space its own
+                    presence without taking over the whole room.</p>
+                <p>It is a very practical option for homes where space is limited but where this part of the home still
+                    needs to feel intentional and meaningful.</p>
+
+                <h2>What Materials Work Best?</h2>
+                <p>The materials you choose change how the space looks and how it feels. Here are the most popular and
+                    reliable options.</p>
+                <ul>
+                    <li><strong>Teak or sheesham wood:</strong> warm, strong, and long-lasting. Carved details in these
+                        woods look beautiful and feel very traditional.</li>
+                    <li><strong>White marble:</strong> clean, bright, and widely loved in Indian homes. It reflects
+                        light well and gives the space a feeling of purity.</li>
+                    <li><strong>Light oak or pine:</strong> for a softer, more modern look that still feels warm and
+                        welcoming.</li>
+                    <li><strong>Wood and marble together:</strong> the most popular combination right now. Wood for the
+                        frame. Marble for the shelf and back wall.</li>
+                </ul>
+                <p>Whatever you choose, the quality of the work matters. A Mandir Design made carefully by a skilled
+                    craftsperson will always look and feel better than one that is mass-made. Hyderabad has a strong
+                    tradition of woodcarving and stonework, and working with local craftspeople can produce something
+                    that is truly one of a kind.</p>
+
+                <h2>Getting the Lighting Right</h2>
+                <p>Lighting is one of the most important parts of this space, and the most often overlooked. A warm,
+                    soft light inside the Mandir Design makes it look like it is glowing. It draws your eyes to it. It
+                    makes the space feel calm and peaceful, even in a busy room.</p>
+                <p>Small LED lights fitted inside the shelf, behind the idols or along the top and sides, are one of the
+                    best options. Warm yellow-white LEDs give a soft golden glow that feels right for a place of prayer.
+                </p>
+                <p>A small spotlight placed just above it can also work well, focused directly on the idol shelf to make
+                    it stand out clearly in the room. Avoid bright white or blue-toned lights here. They feel too harsh
+                    and cold for a space that should feel warm and peaceful.</p>
+                <em>The right light does not just show the prayer space. It makes it glow. That small change makes a
+                    very big difference to how it feels every day.</em>
+
+                <h2>Small Details That Make It Feel Complete</h2>
+                <ul>
+                    <li>A small arch or roof over the idol shelf is one of the nicest details you can add. It frames the
+                        idols and gives the space a temple-like quality.</li>
+                    <li>A small drawer or cabinet just below the main shelf is very useful. It gives you a proper place
+                        to keep incense sticks, camphor, cotton wicks, and flowers.</li>
+                    <li>The floor area in front of the prayer space can also be made to look slightly different from the
+                        rest of the room — a different tile, a small marble inlay, or a simple prayer mat creates a
+                        clear boundary.</li>
+                </ul>
+
+                <h2>This Space Deserves the Same Care as Every Other Room</h2>
+                <p>A prayer space is not just a shelf or a cabinet. It is one of the most meaningful corners of any
+                    Indian home. It deserves proper planning, not just placement in whatever space is left over.</p>
+                <p>Whether you want a full Mandir design, a built-in living room unit, a wall-mounted option, or a space
+                    within a larger storage wall, the right choice depends on the size of your home and how you want it
+                    to feel.</p>
+                <p>The most important things are simple. Put it in the right spot. Use good materials. Add warm
+                    lighting. Keep it clean and organised. When these things come together, the prayer space will feel
+                    beautiful and peaceful every single day.</p>
+                <p>Planning this space early, before the walls are finished and before the furniture is placed, always
+                    gives much better results. You get more options. The design can be truly built-in. And everything
+                    around it can be planned to work with it properly.</p>
+                <p>At Novelle Interiors, we treat every part of a home with care, and this space especially. If you are
+                    building or redesigning your home and want to create a prayer corner that truly feels right, we
+                    would love to talk to you.</p>
+                <em>A home with a well-designed prayer space feels complete. It is one of the most meaningful things you
+                    can plan, and one of the most rewarding. Let Novelle Interiors help you get it right.</em>
+                <p>Get in touch with Novelle Interiors today. We are here to help.</p>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h6 class="widget-title">Recent News</h6>
+                <div class="recent-posts-list">
+                    <a href="#" class="recent-post-item"><span class="rp-title">Stunning Parallel Kitchen Design
+                            Ideas</span><span class="rp-meta">May 20, 2026 · Kitchen</span></a>
+                    <a href="#" class="recent-post-item"><span class="rp-title">Beautiful Mandir Design Ideas for
+                            Home</span><span class="rp-meta">May 18, 2026 · Pooja Unit</span></a>
+                    <a href="#" class="recent-post-item"><span class="rp-title">Wooden Wall Panel Designs That Transform
+                            Any Room</span><span class="rp-meta">May 16, 2026 · Interior Design</span></a>
+                    <a href="#" class="recent-post-item"><span class="rp-title">Modern Lighting Ideas for Your Living
+                            Room</span><span class="rp-meta">May 11, 2026 · Living Room</span></a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ===== FOOTER CTA ===== -->
+    <div class="footer-cta reveal">
+        <div class="container">
+            <h2 class="cta-title">Have a project in<br>mind?</h2>
+            <p class="cta-text">Ready to transform your space? Let's turn your vision into reality. Contact us<br> now
+                to discuss your interior design project and bring your ideas to life!</p>
+            <a href="../contact.html" class="contactus">Contact Us <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><img src="..\assets\logo.jpg" alt="Novelle Interiors"></div>
+                    <p>Novelle Interiors helps people create beautiful interiors with the utmost quality. With nearly 14
+                        years of experience in the interior design industry.</p>
+                    <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                                class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a
+                            href="#"><i class="fab fa-youtube"></i></a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="../livingroom.html">Living Room</a></li>
+                        <li><a href="../bedroom.html">Bedroom</a></li>
+                        <li><a href="../dining.html">Dining</a></li>
+                        <li><a href="../kitchen.html">Kitchen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Refer a friend</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Office</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Plotno.216, Kantivanam Colony, Kondapur, Hyderabad,
+                        Telangana 500084</p>
+                    <p><i class="far fa-envelope-open"></i> sales@novelleinteriors.in</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 90004 77756</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2025 Novelle Interiors. All Rights Reserved.</p>
+                <div><a href="#">Privacy Policies</a> | <a href="#">Terms and Conditions</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919000477756" class="whatsapp-float" target="_blank"><svg viewBox="0 0 32 32">
+            <path
+                d="M16.004 0C7.164 0 0 7.164 0 16.004c0 2.824.738 5.482 2.027 7.789L0 32l8.418-2.004c2.219 1.156 4.742 1.816 7.418 1.816C24.84 31.812 32 24.648 32 15.812 32 7.164 24.84 0 16.004 0zm0 29.094c-2.445 0-4.73-.656-6.703-1.797l-.48-.285-4.973 1.184 1.262-4.844-.316-.5C3.563 20.824 2.719 18.504 2.719 16c0-7.324 5.961-13.281 13.285-13.281 7.32 0 13.277 5.957 13.277 13.281 0 7.32-5.957 13.094-13.277 13.094zm7.281-9.805c-.398-.199-2.355-1.16-2.719-1.293-.363-.133-.629-.199-.895.199-.266.398-1.031 1.293-1.262 1.559-.234.266-.465.301-.863.1-.398-.199-1.68-.617-3.199-1.965-1.184-1.051-1.98-2.348-2.215-2.746-.234-.398-.023-.613.176-.812.18-.18.398-.465.598-.699.199-.234.266-.398.398-.664.133-.266.066-.5-.033-.699-.1-.199-.895-2.156-1.227-2.953-.324-.773-.652-.668-.895-.68-.234-.012-.5-.016-.766-.016-.266 0-.699.1-1.063.5-.363.398-1.394 1.363-1.394 3.32 0 1.957 1.426 3.848 1.625 4.117.199.266 2.805 4.281 6.797 6.004.949.41 1.691.656 2.27.84.953.305 1.82.262 2.508.16.766-.113 2.355-.965 2.688-1.895.336-.93.336-1.727.234-1.895-.098-.168-.363-.266-.762-.465z" />
+        </svg></a>
+
+    <!-- ===== QUOTE MODAL POPUP (same as other pages) ===== -->
+    <div class="quote-modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-label="Get a quote">
+        <div class="quote-modal">
+            <button class="quote-modal-close" id="closeQuoteBtn" aria-label="Close">&times;</button>
+            <div class="quote-modal-left">
+                <img src="https://lhinteriors.in/wp-content/uploads/2024/04/dining-room-services3.webp"
+                    alt="Luxury Interior">
+            </div>
+            <div class="quote-modal-right">
+                <h2>Get a quote</h2>
+                <div class="quote-form">
+                    <input type="text" id="q-name" placeholder="Name" autocomplete="name">
+                    <input type="tel" id="q-phone" placeholder="Phone Number" autocomplete="tel">
+                    <input type="email" id="q-email" placeholder="Email" autocomplete="email">
+                    <input type="text" id="q-budget" placeholder="Budget">
+                    <textarea id="q-message" placeholder="Message" rows="4"></textarea>
+                    <button class="quote-send-btn" id="quoteSendBtn">SEND</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
+            });
+        });
+
+        // Sticky header shadow
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 10) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Quote Modal Logic (same as other pages)
+        const openQuoteBtn = document.getElementById('openQuoteBtn');
+        const quoteModal = document.getElementById('quoteModal');
+        const closeQuoteBtn = document.getElementById('closeQuoteBtn');
+        const quoteSendBtn = document.getElementById('quoteSendBtn');
+
+        function openModal() {
+            if (quoteModal) {
+                quoteModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            if (quoteModal) {
+                quoteModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (openQuoteBtn) {
+            openQuoteBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                openModal();
+            });
+        }
+        if (closeQuoteBtn) closeQuoteBtn.addEventListener('click', closeModal);
+        if (quoteModal) {
+            quoteModal.addEventListener('click', function (e) {
+                if (e.target === quoteModal) closeModal();
+            });
+        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && quoteModal && quoteModal.classList.contains('active')) closeModal();
+        });
+        if (quoteSendBtn) {
+            quoteSendBtn.addEventListener('click', function () {
+                const name = document.getElementById('q-name').value.trim();
+                const phone = document.getElementById('q-phone').value.trim();
+                const email = document.getElementById('q-email').value.trim();
+                if (!name || !phone || !email) {
+                    alert('Please fill in Name, Phone, and Email.');
+                    return;
+                }
+                alert('Thank you! We will get back to you shortly.');
+                closeModal();
+            });
+        }
+
+        // Handle nested dropdowns on mobile
+        if (window.innerWidth <= 992) {
+            document.querySelectorAll('.nav-menu .menu-item-has-children > a').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const parentLi = item.closest('.menu-item-has-children');
+                    if (parentLi) parentLi.classList.toggle('active-dropdown');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

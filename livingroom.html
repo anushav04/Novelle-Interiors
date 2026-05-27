@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Luxury Living Room | Novelle Interiors</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Federo&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* ===== RESET & GLOBAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      background-color: #f7f5f2;
+      color: #211D1A;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #BF793B;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #402F21;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== BUTTON ===== */
+    .btn-primary {
+      background-color: #000000;
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      padding: 15px 30px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      background-color: #402F21;
+      color: #fff;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: #FFFFFF;
+      padding: 15px 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0);
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+      padding: 10px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo-img {
+      max-width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    /* Navigation */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-menu li a {
+      font-size: 13.3px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #211D1A;
+      letter-spacing: 0.1px;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li.active a {
+      color: #BF793B;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Dropdown Menu */
+    .nav-menu .menu-item-has-children {
+      position: relative;
+    }
+
+    .nav-menu .sub-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 12px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      z-index: 100;
+      list-style: none;
+    }
+
+    .nav-menu .menu-item-has-children:hover>.sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-menu .sub-menu li a {
+      display: block;
+      padding: 8px 20px;
+      color: #333;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu .sub-menu li a:hover {
+      background: #f5f5f5;
+      color: #c6a43b;
+      padding-left: 25px;
+    }
+
+    /* Level 2 Dropdown */
+    .nav-menu .sub-menu .menu-item-has-children .sub-menu-level2 {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      min-width: 200px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 12px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu .sub-menu .menu-item-has-children:hover .sub-menu-level2 {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    .nav-menu .fa-chevron-down,
+    .nav-menu .fa-chevron-right {
+      font-size: 12px;
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-menu .menu-item-has-children:hover>a .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+
+    /* COLLECTIONS DROPDOWN */
+    .collections-dropdown {
+      position: relative;
+    }
+
+    .collections-dropdown .sub-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      background: #fff;
+      padding: 18px 0;
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      z-index: 999;
+    }
+
+    .collections-dropdown:hover .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .collections-dropdown .sub-menu li a {
+      display: block;
+      padding: 14px 24px;
+      color: #222;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .collections-dropdown .sub-menu li a:hover {
+      background: #f5f5f5;
+      color: #c58b55;
+      padding-left: 30px;
+    }
+
+    .collections-dropdown>a i {
+      margin-left: 6px;
+      font-size: 12px;
+    }
+
+    /* ===== QUOTE MODAL POPUP ===== */
+    .quote-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .quote-modal-overlay.active {
+      display: flex;
+    }
+
+    .quote-modal {
+      display: flex;
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 860px;
+      max-height: 90vh;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .quote-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #222;
+      z-index: 10;
+    }
+
+    .quote-modal-left {
+      width: 42%;
+      overflow: hidden;
+    }
+
+    .quote-modal-left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .quote-modal-right {
+      flex: 1;
+      padding: 48px 40px 40px;
+      overflow-y: auto;
+    }
+
+    .quote-modal-right h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #111;
+      margin: 0 0 28px;
+    }
+
+    .quote-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .quote-form input,
+    .quote-form textarea {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-family: 'Open Sans', sans-serif;
+      outline: none;
+    }
+
+    .quote-send-btn {
+      width: 100%;
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 16px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .quote-send-btn:hover {
+      background: #333;
+    }
+
+    @media (max-width: 640px) {
+      .quote-modal {
+        flex-direction: column;
+        max-height: 95vh;
+      }
+
+      .quote-modal-left {
+        width: 100%;
+        height: 180px;
+      }
+
+      .quote-modal-right {
+        padding: 30px 24px 28px;
+      }
+
+      .quote-modal-right h2 {
+        font-size: 26px;
+      }
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-main {
+      background-color: #211D1A;
+      color: #fff;
+      padding: 60px 0 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .footer-logo img {
+      filter: invert(1);
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.15px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul li a {
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    .footer-col ul li a:hover {
+      color: #BF793B;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .copyright {
+      border-top: 1px dashed #402F21;
+      padding-top: 30px;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        flex-direction: column;
+      }
+
+      .copyright {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+    }
+
+    /* ===== WHATSAPP FLOAT ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #000;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 99;
+      cursor: pointer;
+      transition: all 0.2s;
+      animation: floatWhatsapp 2s ease-in-out infinite;
+    }
+
+    .whatsapp-float i {
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #402F21;
+      transform: scale(1.05);
+    }
+
+    @keyframes floatWhatsapp {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    /* ===== HERO SECTION (existing styles) ===== */
+    .hero-section {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 120px 90px 100px;
+      gap: 70px;
+    }
+
+    .left-section {
+      width: 50%;
+      position: relative;
+      height: 560px;
+      flex-shrink: 0;
+    }
+
+    .left-section img {
+      position: absolute;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border-radius: 14px;
+    }
+
+    .img1 {
+      width: 46%;
+      height: 200px;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      animation: float 3s ease-in-out infinite;
+      animation-delay: 0s;
+    }
+
+    .img2 {
+      width: 46%;
+      height: 200px;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      animation: float 3s ease-in-out infinite;
+      animation-delay: 0.3s;
+    }
+
+    .img3 {
+      width: 62%;
+      height: 280px;
+      top: 150px;
+      left: 50%;
+      z-index: 2;
+      animation: floatCenter 3s ease-in-out infinite;
+      animation-delay: 0.6s;
+      transform: translateX(-50%);
+    }
+
+    .right-section {
+      width: 50%;
+      animation: fadeUp 0.8s ease;
+    }
+
+    .tag {
+      background: #b97a3d;
+      color: white;
+      padding: 8px 16px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      display: inline-block;
+    }
+
+    .right-section h1 {
+      font-size: 68px;
+      line-height: 1.05;
+      margin: 25px 0;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .right-section p {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .dark-btn,
+    .light-btn {
+      padding: 16px 30px;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s ease;
+      font-weight: 600;
+    }
+
+    .dark-btn {
+      background: black;
+      color: white;
+    }
+
+    .light-btn {
+      background: white;
+      border: 1px solid #ccc;
+    }
+
+    .dark-btn:hover,
+    .light-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about-section {
+      width: 100%;
+      padding: 140px 90px;
+      background: #f4f4f4;
+    }
+
+    .about-heading {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-heading h2 {
+      font-size: 60px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 25px;
+      line-height: 1.1;
+    }
+
+    .about-heading p {
+      font-size: 20px;
+      line-height: 1.9;
+      color: #222;
+    }
+
+    .about-heading span {
+      color: #bf7c37;
+      font-weight: 600;
+    }
+
+    .about-boxes {
+      width: 100%;
+      margin-top: 120px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 80px;
+    }
+
+    .about-box {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      transition: 0.3s ease;
+    }
+
+    .about-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .about-box h3 {
+      font-size: 58px;
+      color: #bf7c37;
+      margin-bottom: 25px;
+    }
+
+    .about-box h4 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #111;
+    }
+
+    .about-box p {
+      font-size: 18px;
+      line-height: 2;
+      color: #222;
+    }
+
+    /* GALLERY */
+    .gallery-section {
+      padding: 120px 90px;
+    }
+
+    .gallery-section h2 {
+      font-size: 58px;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-card {
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      transition: 0.4s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.06);
+    }
+
+    /* FALL COLLECTIONS */
+    .fall-section {
+      padding: 120px 90px;
+      background: #fff;
+    }
+
+    .fall-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .fall-title {
+      font-size: 58px;
+      font-weight: 800;
+      color: #111;
+      letter-spacing: -1px;
+    }
+
+    .fall-tabs {
+      display: flex;
+      gap: 10px;
+    }
+
+    .fall-tab {
+      padding: 12px 28px;
+      border: 1.5px solid #ccc;
+      background: transparent;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: 0.25s ease;
+      color: #111;
+    }
+
+    .fall-tab:hover {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+
+    .fall-tab.active {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+
+    .fall-grid {
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .fall-grid.active {
+      display: grid;
+      animation: fallGridIn 0.5s ease forwards;
+    }
+
+    @keyframes fallGridIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fall-card {
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .fall-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .fall-card:hover img {
+      transform: scale(1.06);
+    }
+
+    /* BENEFITS */
+    .benefits-section {
+      padding: 120px 90px;
+      background: #f7f5f2;
+      text-align: center;
+    }
+
+    .benefits-title {
+      font-size: 40px;
+      font-weight: 700;
+      color: #111;
+      max-width: 700px;
+      margin: 0 auto 80px;
+      line-height: 1.2;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .benefit-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .benefit-icon {
+      margin-bottom: 24px;
+    }
+
+    .benefit-item h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 14px;
+    }
+
+    .benefit-item p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* ROOMS CAROUSEL */
+    .rooms-section {
+      padding: 120px 90px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .rooms-title {
+      font-size: 40px;
+      font-weight: 700;
+      color: #111;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .rooms-carousel-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .rooms-carousel {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.45s ease;
+    }
+
+    .room-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+      transition: 0.3s ease;
+    }
+
+    .room-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .room-img-wrap {
+      overflow: hidden;
+    }
+
+    .room-img-wrap img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: 0.4s ease;
+    }
+
+    .room-card:hover .room-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .room-info {
+      padding: 16px;
+    }
+
+    .room-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 8px;
+    }
+
+    .room-name {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #111;
+    }
+
+    .room-quote-btn {
+      padding: 6px 12px;
+      border-radius: 25px;
+      border: 1px solid #b97a3d;
+      background: transparent;
+      color: #b97a3d;
+      font-size: 9px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .room-quote-btn:hover {
+      background: #b97a3d;
+      color: white;
+    }
+
+    .room-desc {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .room-more {
+      text-decoration: none;
+      color: #b97a3d;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .room-more:hover {
+      color: #111;
+    }
+
+    .rooms-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 46px;
+      height: 46px;
+      border: none;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      font-size: 26px;
+      color: #111;
+      cursor: pointer;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease;
+    }
+
+    .rooms-arrow:hover {
+      background: #111;
+      color: white;
+    }
+
+    .rooms-prev {
+      left: 10px;
+    }
+
+    .rooms-next {
+      right: 10px;
+    }
+
+    /* BANNER */
+    .banner-section {
+      width: 100%;
+      height: 600px;
+      background: black;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 40px;
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 10;
+      color: white;
+      max-width: 900px;
+    }
+
+    .banner-content h1 {
+      font-size: 82px;
+      line-height: 1.05;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .banner-content p {
+      font-size: 20px;
+      line-height: 1.9;
+      color: #d6d6d6;
+      margin-bottom: 35px;
+    }
+
+    .banner-content button {
+      padding: 16px 34px;
+      border: none;
+      background: #b97a3d;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .banner-content button:hover {
+      transform: translateY(-3px);
+      background: #d08b44;
+    }
+
+    /* ANIMATIONS & REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(70px);
+      transition: 0.7s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    @keyframes floatCenter {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(-12px);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background: #fff;
+        width: 80%;
+        height: calc(100% - 70px);
+        flex-direction: column;
+        padding: 40px 20px;
+        transition: 0.3s;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+        overflow-y: auto;
+        gap: 15px;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .hero-section {
+        flex-direction: column;
+        padding: 100px 40px;
+      }
+
+      .left-section,
+      .right-section {
+        width: 100%;
+      }
+
+      .right-section h1 {
+        font-size: 52px;
+      }
+
+      .about-section,
+      .gallery-section,
+      .fall-section,
+      .benefits-section,
+      .rooms-section {
+        padding: 80px 40px;
+      }
+
+      .about-heading h2,
+      .gallery-section h2,
+      .fall-title {
+        font-size: 42px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .fall-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 80px 20px;
+      }
+
+      .right-section h1 {
+        font-size: 38px;
+      }
+
+      .about-heading h2 {
+        font-size: 32px;
+      }
+
+      .fall-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fall-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .banner-content h1 {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.jpg" alt="Logo" class="logo-img">
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="design.html">Design Ideas</a></li>
+        <li class="menu-item-has-children collections-dropdown">
+          <a href="collections.html">Collections <i class="fas fa-chevron-down"></i></a>
+          <ul class="sub-menu collections-menu">
+            <li><a href="livingroom.html">Living Room</a></li>
+            <li><a href="bedroom.html">Bedroom</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="kitchen.html">Kitchen</a></li>
+            <li><a href="accents.html">Accent</a></li>
+          </ul>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="projects.html">Projects <i class="fas fa-chevron-down"></i></a>
+          <ul class="sub-menu">
+            <li class="menu-item-has-children"><a href="#">The Opulent Oasis <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="#">Architecture</a></li>
+                <li><a href="#">Interior Design</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/dsr.html">DSR Farmhouse <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/dsr.html">Architecture</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/ciro.html">CIRO Pharma <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/ciro.html">Architecture</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/alais.html">Alais Home Solutions <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/alais.html">Interior Design</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/manor.html">Modern Manor <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/manor.html">Interior Design</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/slate.html">The Slate House <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/slate.html">Architecture</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/panacea.html">Panacea Hospital Design <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/panacea.html">Exterior Design</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/blues.html">The Design Blues <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/blues.html">Interior Design</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/harmony.html">The Harmony Home <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/harmony.html">Interior Design</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/farmhouse.html">Bhaskaram Farmhouse <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/farmhouse.html">Architecture</a></li>
+                <li><a href="projects/farmhouse.html">Interior Design</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/dsrhosp.html">DSR Charitable Hospitals <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/dsrhosp.html">Architecture</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/min.html">Minimal Charm <i
+                  class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/min.html">Interior Design</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children">
+              <a href="projects/aiva.html">Hotel Aiva Gachibowli <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2">
+                <li><a href="projects/aiva.html">Architecture</a></li>
+                <li><a href="projects/aiva.html">Interior Design</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" class="btn-primary" id="openQuoteBtn">Get a quote</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="left-section">
+        <img src="living1.jpg" class="img1" alt="Living Room 1">
+        <img src="living2.jpg" class="img2" alt="Living Room 2">
+        <img src="living3.jpg" class="img3" alt="Living Room 3">
+      </div>
+      <div class="right-section">
+        <span class="tag">LIVING ROOM</span>
+        <h1>Create Your Dream Living Room Designs</h1>
+        <p>Elegant luxury interiors crafted with modern aesthetics, premium textures and timeless beauty.</p>
+        <div class="buttons">
+          <button class="dark-btn" id="heroQuoteBtn">GET QUOTE</button>
+          <button class="light-btn">MORE DETAILS</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section reveal">
+      <div class="about-heading">
+        <h2>About Our Living Room Designs Services</h2>
+        <p>we understand that your living room is the heart of your home—a place to relax, entertain, and create lasting
+          memories. As premier <span>living room interior designers in Hyderabad,</span> we offer comprehensive design
+          services tailored to bring your vision to life. Our goal is to create a space that reflects your personality
+          and lifestyle, ensuring your living room becomes a true centerpiece of your home.</p>
+      </div>
+      <div class="about-boxes">
+        <div class="about-box">
+          <h3>01</h3>
+          <h4>Our Process</h4>
+          <p>We begin with a detailed consultation to understand your needs, preferences, and budget. We'll discuss
+            space optimization, furniture selection, color schemes, and décor options.</p>
+        </div>
+        <div class="about-box">
+          <h3>02</h3>
+          <h4>Materials & Expertise</h4>
+          <p>Our designers are well-versed in a variety of styles (modern, traditional, mid-century) and materials
+            (wood, fabric, leather) to create a living room that's both beautiful and functional.</p>
+        </div>
+        <div class="about-box">
+          <h3>03</h3>
+          <h4>Client Involvement</h4>
+          <p>We believe in open communication and collaboration throughout the entire design process. You'll be involved
+            in every step, from initial concept to final execution.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery-section reveal">
+      <h2>Living Room Interior Designs</h2>
+      <div class="gallery-grid">
+        <div class="gallery-card"><img src="living5.jpg" alt="Gallery 1"></div>
+        <div class="gallery-card"><img
+            src="https://media.architecturaldigest.com/photos/6759e6573454704b7b63f079/master/w_1024%2Cc_limit/012624_ParisForino_WestEnd_Garruppo_015.jpg"
+            alt="Gallery 2"></div>
+        <div class="gallery-card"><img
+            src="https://cdn.home-designing.com/wp-content/uploads/2024/08/Graceful-Mid-Century-Modern-Living-Rooms-1024x732.jpg"
+            alt="Gallery 3"></div>
+      </div>
+    </section>
+
+    <!-- FALL COLLECTIONS -->
+    <section class="fall-section reveal">
+      <div class="fall-header">
+        <h2 class="fall-title">FALL COLLECTIONS</h2>
+        <div class="fall-tabs">
+          <button class="fall-tab active" data-tab="contemporary">Contemporary</button>
+          <button class="fall-tab" data-tab="neoclassical">Neoclassical</button>
+          <button class="fall-tab" data-tab="classical">Classical</button>
+        </div>
+      </div>
+      <div class="fall-grid active" id="tab-contemporary">
+        <div class="fall-card"><img src="living1.jpg" alt="Contemporary 1"></div>
+        <div class="fall-card"><img src="living2.jpg" alt="Contemporary 2"></div>
+        <div class="fall-card"><img src="living3.jpg" alt="Contemporary 3"></div>
+        <div class="fall-card"><img src="living5.jpg" alt="Contemporary 4"></div>
+        <div class="fall-card"><img
+            src="https://images.livspace-cdn.com/w:3840/plain/https://d3gq2merok8n5r.cloudfront.net/abhinav/ond-1634120396-Obfdc/di-2026-1769081758-Ayx2Q/jfm-1769081772-NQyUm/li-1769098863-3uRws/42-1772707579-sGE5Y.jpg"
+            alt="Contemporary 5"></div>
+        <div class="fall-card"><img src="living1.jpg" alt="Contemporary 6"></div>
+      </div>
+      <div class="fall-grid" id="tab-neoclassical">
+        <div class="fall-card"><img src="living2.jpg" alt="Neoclassical 1"></div>
+        <div class="fall-card"><img src="living3.jpg" alt="Neoclassical 2"></div>
+        <div class="fall-card"><img src="living5.jpg" alt="Neoclassical 3"></div>
+        <div class="fall-card"><img src="lliving6.jpg" alt="Neoclassical 4"></div>
+        <div class="fall-card"><img src="living1.jpg" alt="Neoclassical 5"></div>
+        <div class="fall-card"><img src="living2.jpg" alt="Neoclassical 6"></div>
+      </div>
+      <div class="fall-grid" id="tab-classical">
+        <div class="fall-card"><img src="living3.jpg" alt="Classical 1"></div>
+        <div class="fall-card"><img src="living5.jpg" alt="Classical 2"></div>
+        <div class="fall-card"><img src="living6.jpg" alt="Classical 3"></div>
+        <div class="fall-card"><img src="living1.jpg" alt="Classical 4"></div>
+        <div class="fall-card"><img src="living2.jpg" alt="Classical 5"></div>
+        <div class="fall-card"><img src="living3.jpg" alt="Classical 6"></div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits-section reveal">
+      <h2 class="benefits-title">Benefits of Choosing Novelle Interiors for Your Living Room Design</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+              fill="none" stroke="#b97a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="22" cy="20" r="7" />
+              <circle cx="42" cy="20" r="7" />
+              <path d="M6 54c0-10 7-16 16-16h18c9 0 16 6 16 16" />
+              <path d="M32 8 l2.5 5 l5 0 l-4 3.5 l1.5 5 l-5-3 l-5 3 l1.5-5 l-4-3.5 l5 0 z" />
+            </svg></div>
+          <h4>Experience & Expertise</h4>
+          <p>Our team of passionate designers has years of experience crafting stunning and functional living spaces.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+              fill="none" stroke="#b97a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="10" y="10" width="44" height="44" rx="4" />
+              <path d="M10 10 L22 22 M54 10 L42 22 M10 54 L22 42 M54 54 L42 42" />
+              <circle cx="32" cy="32" r="9" />
+              <path d="M32 23 v-5 M32 46 v-5 M23 32 h-5 M46 32 h-5" />
+            </svg></div>
+          <h4>Space Optimization</h4>
+          <p>We'll help you maximize the potential of your living room, regardless of its size.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+              fill="none" stroke="#b97a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="8" width="48" height="48" rx="6" />
+              <path d="M20 32 l8 8 l16-16" />
+              <line x1="38" y1="12" x2="44" y2="18" />
+              <line x1="12" y1="38" x2="18" y2="44" />
+            </svg></div>
+          <h4>Personalized Design</h4>
+          <p>We don't believe in one-size-fits-all solutions. Your living room will be a unique reflection of your style
+            and taste.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+              fill="none" stroke="#b97a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="28" width="48" height="28" rx="4" />
+              <path d="M20 28 V22 a12 12 0 0 1 24 0 v6" />
+              <circle cx="32" cy="42" r="5" />
+              <line x1="32" y1="47" x2="32" y2="52" />
+            </svg></div>
+          <h4>Stress-free Process</h4>
+          <p>We handle everything from furniture selection to installation, ensuring a smooth and stress-free
+            experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS CAROUSEL -->
+    <section class="rooms-section reveal">
+      <h2 class="rooms-title">Check Out Our Home Interior Designs & Ideas</h2>
+      <div class="rooms-carousel-wrapper">
+        <button class="rooms-arrow rooms-prev">&#8249;</button>
+        <div class="rooms-carousel">
+          <div class="room-card">
+            <div class="room-img-wrap"><img src="living1.jpg" alt="Living Room"></div>
+            <div class="room-info">
+              <div class="room-top"><span class="room-name">LIVING ROOM</span><button class="room-quote-btn">GET FREE
+                  QUOTE</button></div>
+              <p class="room-desc">Create Your Dream And Perfect Living Room Space</p><a href="#" class="room-more">MORE
+                DETAILS &#8594;</a>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-img-wrap"><img src="living2.jpg" alt="Bedroom"></div>
+            <div class="room-info">
+              <div class="room-top"><span class="room-name">BEDROOM</span><button class="room-quote-btn">GET FREE
+                  QUOTE</button></div>
+              <p class="room-desc">Let Us Design Your Perfect And Dream Bedroom</p><a href="#" class="room-more">MORE
+                DETAILS &#8594;</a>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-img-wrap"><img src="living3.jpg" alt="Dining"></div>
+            <div class="room-info">
+              <div class="room-top"><span class="room-name">DINING</span><button class="room-quote-btn">GET FREE
+                  QUOTE</button></div>
+              <p class="room-desc">From Breakfast to Banquets Design Your Dream Dining Space</p><a href="#"
+                class="room-more">MORE DETAILS &#8594;</a>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-img-wrap"><img src="living5.jpg" alt="Kitchen"></div>
+            <div class="room-info">
+              <div class="room-top"><span class="room-name">KITCHEN</span><button class="room-quote-btn">GET FREE
+                  QUOTE</button></div>
+              <p class="room-desc">Craft Your Perfect Kitchen Where Innovation Meets Timeless Design</p><a href="#"
+                class="room-more">MORE DETAILS &#8594;</a>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-img-wrap"><img src="lliving6.jpg" alt="Accents"></div>
+            <div class="room-info">
+              <div class="room-top"><span class="room-name">ACCENTS</span><button class="room-quote-btn">GET FREE
+                  QUOTE</button></div>
+              <p class="room-desc">Elevate Every Corner With Our Curated Accent Collections</p><a href="#"
+                class="room-more">MORE DETAILS &#8594;</a>
+            </div>
+          </div>
+        </div>
+        <button class="rooms-arrow rooms-next">&#8250;</button>
+      </div>
+    </section>
+
+    <!-- BANNER -->
+    <section class="banner-section">
+      <div class="banner-content">
+        <h1>Have a project in mind?</h1>
+        <p>Transform your home into a luxury modern space.</p>
+        <button id="bannerContactBtn">CONTACT US</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><img src="assets/logo.jpg" alt="Novelle Interiors"></div>
+          <p>Novelle Interiors helps people create beautiful interiors with the utmost quality. With nearly 14 years of
+            experience in the interior design industry.</p>
+          <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                class="fab fa-youtube"></i></a></div>
+        </div>
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <ul>
+            <li><a href="livingroom.html">Living Room</a></li>
+            <li><a href="bedroom.html">Bedroom</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="kitchen.html">Kitchen</a></li>
+            <li><a href="accents.html">Accent</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Refer a friend</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Office</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Plotno.216, Kantivanam Colony, Kondapur, Hyderabad, Telangana 500084
+          </p>
+          <p><i class="far fa-envelope-open"></i> <a
+              href="mailto:sales@novelleinteriors.in">sales@novelleinteriors.in</a></p>
+          <p><i class="fas fa-phone-alt"></i> +91 90004 77756</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2025 Novelle Interiors. All Rights Reserved.</p>
+        <div><a href="#">Privacy Policies</a> | <a href="#">Terms and Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <div class="whatsapp-float" id="whatsappBtn"><i class="fab fa-whatsapp"></i></div>
+
+  <!-- QUOTE MODAL POPUP -->
+  <div class="quote-modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-label="Get a quote">
+    <div class="quote-modal">
+      <button class="quote-modal-close" id="closeQuoteBtn" aria-label="Close">&times;</button>
+      <div class="quote-modal-left"><img
+          src="https://lhinteriors.in/wp-content/uploads/2024/04/dining-room-services3.webp" alt="Luxury Interior">
+      </div>
+      <div class="quote-modal-right">
+        <h2>Get a quote</h2>
+        <div class="quote-form">
+          <input type="text" id="q-name" placeholder="Name" autocomplete="name">
+          <input type="tel" id="q-phone" placeholder="Phone Number" autocomplete="tel">
+          <input type="email" id="q-email" placeholder="Email" autocomplete="email">
+          <input type="text" id="q-budget" placeholder="Budget">
+          <textarea id="q-message" placeholder="Message" rows="4"></textarea>
+          <button class="quote-send-btn" id="quoteSendBtn">SEND</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      // ---------- SCROLL REVEAL ----------
+      const revealElements = document.querySelectorAll('.reveal');
+      function revealSections() {
+        revealElements.forEach((el) => {
+          const windowHeight = window.innerHeight;
+          const revealTop = el.getBoundingClientRect().top;
+          if (revealTop < windowHeight - 100) el.classList.add('active');
+        });
+      }
+      window.addEventListener('scroll', revealSections);
+      revealSections();
+
+      // ---------- FALL TABS ----------
+      const fallTabs = document.querySelectorAll('.fall-tab');
+      const fallGrids = document.querySelectorAll('.fall-grid');
+      fallTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          fallTabs.forEach(t => t.classList.remove('active'));
+          fallGrids.forEach(g => g.classList.remove('active'));
+          tab.classList.add('active');
+          const target = tab.getAttribute('data-tab');
+          const targetGrid = document.getElementById('tab-' + target);
+          if (targetGrid) targetGrid.classList.add('active');
+        });
+      });
+
+      // ---------- CAROUSEL ----------
+      const carousel = document.querySelector('.rooms-carousel');
+      const prevBtn = document.querySelector('.rooms-prev');
+      const nextBtn = document.querySelector('.rooms-next');
+      const cards = document.querySelectorAll('.room-card');
+      let currentIndex = 0;
+      function getVisibleCards() {
+        if (window.innerWidth <= 768) return 1;
+        else if (window.innerWidth <= 1000) return 2;
+        else return 3;
+      }
+      function updateCarousel() {
+        const visible = getVisibleCards();
+        const gap = 24;
+        const wrapperWidth = document.querySelector('.rooms-carousel-wrapper').offsetWidth;
+        const cardWidth = (wrapperWidth - (gap * (visible - 1))) / visible;
+        cards.forEach(card => card.style.minWidth = `${cardWidth}px`);
+        const move = currentIndex * (cardWidth + gap);
+        carousel.style.transform = `translateX(-${move}px)`;
+        const maxIndex = cards.length - visible;
+        prevBtn.style.opacity = currentIndex === 0 ? '0.4' : '1';
+        nextBtn.style.opacity = currentIndex >= maxIndex ? '0.4' : '1';
+        prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+        nextBtn.style.pointerEvents = currentIndex >= maxIndex ? 'none' : 'auto';
+      }
+      if (nextBtn && prevBtn && carousel) {
+        nextBtn.addEventListener('click', () => {
+          const max = cards.length - getVisibleCards();
+          if (currentIndex < max) { currentIndex++; updateCarousel(); }
+        });
+        prevBtn.addEventListener('click', () => {
+          if (currentIndex > 0) { currentIndex--; updateCarousel(); }
+        });
+        window.addEventListener('resize', () => { currentIndex = 0; updateCarousel(); });
+        updateCarousel();
+      }
+
+      // ---------- HEADER SCROLL SHADOW ----------
+      const header = document.getElementById('mainHeader');
+      window.addEventListener('scroll', () => {
+        if (header) header.classList.toggle('scrolled', window.scrollY > 10);
+      });
+
+      // ---------- MOBILE MENU ----------
+      const menuToggle = document.getElementById('menuToggle');
+      const navMenu = document.getElementById('navMenu');
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navMenu.classList.toggle('active');
+          const icon = menuToggle.querySelector('i');
+          if (navMenu.classList.contains('active')) icon.classList.replace('fa-bars', 'fa-times');
+          else icon.classList.replace('fa-times', 'fa-bars');
+        });
+      }
+
+      function isMobileView() { return window.innerWidth <= 991; }
+      const dropdownParents = document.querySelectorAll('.nav-menu .menu-item-has-children');
+      function handleMobileDropdowns() {
+        if (isMobileView()) {
+          dropdownParents.forEach(parent => {
+            parent.removeEventListener('click', parent._clickHandler);
+            const handler = function (e) {
+              const isLink = e.target.closest('a') && e.target.closest('a').parentElement === parent;
+              if (isLink) {
+                e.preventDefault();
+                if (!parent.classList.contains('active-dropdown')) {
+                  dropdownParents.forEach(p => { if (p !== parent) p.classList.remove('active-dropdown'); });
+                }
+                parent.classList.toggle('active-dropdown');
+              }
+            };
+            parent._clickHandler = handler;
+            parent.addEventListener('click', handler);
+          });
+        } else {
+          dropdownParents.forEach(parent => {
+            if (parent._clickHandler) parent.removeEventListener('click', parent._clickHandler);
+            parent.classList.remove('active-dropdown');
+          });
+        }
+      }
+      window.addEventListener('resize', () => {
+        handleMobileDropdowns();
+        if (!isMobileView() && navMenu && navMenu.classList.contains('active')) {
+          navMenu.classList.remove('active');
+          const icon = menuToggle.querySelector('i');
+          if (icon) icon.classList.replace('fa-times', 'fa-bars');
+        }
+      });
+      handleMobileDropdowns();
+
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', function () {
+          const isLeaf = !link.parentElement.classList.contains('menu-item-has-children');
+          if (isMobileView() && isLeaf && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) icon.classList.replace('fa-times', 'fa-bars');
+          }
+        });
+      });
+
+      // ---------- QUOTE MODAL POPUP (same as other pages) ----------
+      const openQuoteBtn = document.getElementById('openQuoteBtn');
+      const heroQuoteBtn = document.getElementById('heroQuoteBtn');
+      const bannerContactBtn = document.getElementById('bannerContactBtn');
+      const quoteModal = document.getElementById('quoteModal');
+      const closeQuoteBtn = document.getElementById('closeQuoteBtn');
+      const quoteSendBtn = document.getElementById('quoteSendBtn');
+
+      function openModal() {
+        if (quoteModal) {
+          quoteModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+      function closeModal() {
+        if (quoteModal) {
+          quoteModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+      if (openQuoteBtn) openQuoteBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+      if (heroQuoteBtn) heroQuoteBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+      if (bannerContactBtn) bannerContactBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+      if (closeQuoteBtn) closeQuoteBtn.addEventListener('click', closeModal);
+      if (quoteModal) quoteModal.addEventListener('click', (e) => { if (e.target === quoteModal) closeModal(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && quoteModal && quoteModal.classList.contains('active')) closeModal(); });
+      if (quoteSendBtn) {
+        quoteSendBtn.addEventListener('click', () => {
+          const name = document.getElementById('q-name').value.trim();
+          const phone = document.getElementById('q-phone').value.trim();
+          const email = document.getElementById('q-email').value.trim();
+          if (!name || !phone || !email) { alert('Please fill in Name, Phone, and Email.'); return; }
+          alert('Thank you! We will get back to you shortly.');
+          closeModal();
+        });
+      }
+
+      // ---------- WHATSAPP ----------
+      const whatsappBtn = document.getElementById('whatsappBtn');
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', () => {
+          window.open('https://wa.me/919000477756?text=Hello%20Novelle%20Interiors%2C%20I%27m%20interested%20in%20your%20interior%20design%20services.', '_blank');
+        });
+      }
+
+      // Room quote buttons (additional)
+      document.querySelectorAll('.room-quote-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+      });
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,944 @@
+/* ============================================================
+   NOVELLE INTERIORS — FULLY RESPONSIVE STYLESHEET
+   Covers: Mobile (320px+), Tablet (768px), Laptop (1024px),
+           Desktop (1280px+), Wide (1440px+)
+   Strategy: Mobile-first overrides layered on top of existing CSS
+   ============================================================ */
+
+/* ─── GLOBAL HELPERS ─────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent any element from causing horizontal overflow */
+body {
+  overflow-x: hidden;
+}
+
+/* ─── LOGO FIX (broken transforms in original) ───────────── */
+.logo img {
+  max-width: 160px;
+  height: auto;
+  transform: none !important;
+  position: static !important;
+  display: block;
+}
+
+/* Sub-page logo */
+.logo-img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
+/* ─── HEADER ─────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+/* Quote button — hide on very small screens, show on md+ */
+.quote-btn {
+  white-space: nowrap;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+/* ─── MOBILE NAV TOGGLE ───────────────────────────────────── */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #211D1A;
+  padding: 4px 8px;
+  flex-shrink: 0;
+}
+
+/* ─── HERO SECTION ────────────────────────────────────────── */
+/* Fix the hero content positioning — original uses huge negative translateY */
+.hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 0;
+  position: relative;
+  background-position: center center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  transform: none !important;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+/* Animated text — keep the slide animations but fix final positions */
+@keyframes slideLeft {
+  from { transform: translateX(-80px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+@keyframes slideRight {
+  from { transform: translateX(80px);  opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+.hero .interior-text,
+.hero .design-text {
+  display: block;
+  font-size: clamp(48px, 10vw, 160px);
+  line-height: 1;
+  letter-spacing: -2px;
+  transform: none;
+}
+
+.hero .interior-text {
+  animation: slideLeft 1.2s ease forwards;
+}
+
+.hero .design-text {
+  animation: slideRight 1.2s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.dynamic-text {
+  font-size: clamp(14px, 2vw, 24px);
+  margin: 12px 0;
+}
+
+/* Top row (Interior heading + CTA button) */
+.top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-ourworks {
+  white-space: nowrap;
+  padding: 12px 24px;
+  font-size: 13px;
+  align-self: flex-end;
+  margin-bottom: 8px;
+}
+
+/* ─── ABOUT SECTION ───────────────────────────────────────── */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.about-text {
+  flex: 1 1 340px;
+  padding-right: 0;
+}
+
+.about-text h1 {
+  font-size: clamp(28px, 4vw, 50px);
+}
+
+.about-image {
+  flex: 1 1 300px;
+}
+
+/* ─── SECTION TITLE (outline big text) ──────────────────── */
+.section-title {
+  font-size: clamp(40px, 10vw, 160px);
+  line-height: 0.9;
+  word-break: break-word;
+}
+
+/* ─── COLLECTIONS GRID ────────────────────────────────────── */
+.collection-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.collection-card {
+  flex: 1 1 160px;
+  min-width: 140px;
+}
+
+/* ─── APPROACH CARDS ──────────────────────────────────────── */
+.approach {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.approach-card {
+  flex: 1 1 260px;
+}
+
+/* ─── TESTIMONIALS ────────────────────────────────────────── */
+.testimonials-main-title {
+  font-size: clamp(24px, 4vw, 50px);
+}
+
+.testimonial-grid,
+.testimonial-grid-second {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.testimonial-item {
+  flex: 1 1 280px;
+}
+
+/* ─── FOOTER CTA ──────────────────────────────────────────── */
+.footer-cta {
+  padding: 60px 20px;
+}
+
+.cta-title {
+  font-size: clamp(32px, 6vw, 76px);
+  line-height: 1.1;
+}
+
+/* ─── MAIN FOOTER ─────────────────────────────────────────── */
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.footer-col {
+  flex: 1 1 180px;
+  min-width: 160px;
+}
+
+.copyright {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ─── MAP ─────────────────────────────────────────────────── */
+.map-section iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/* ================================================================
+   BREAKPOINT: WIDE DESKTOP  ≥ 1440px
+   ================================================================ */
+@media (min-width: 1440px) {
+  .hero .interior-text,
+  .hero .design-text {
+    font-size: 175px;
+    line-height: 1;
+  }
+
+  .section-title {
+    font-size: 160px;
+  }
+
+  .cta-title {
+    font-size: 76px;
+  }
+}
+
+/* ================================================================
+   BREAKPOINT: STANDARD DESKTOP  1280px – 1439px
+   ================================================================ */
+@media (max-width: 1279px) {
+  .hero .interior-text,
+  .hero .design-text {
+    font-size: 130px;
+  }
+
+  .section-title {
+    font-size: 120px;
+  }
+
+  .about-text h1 {
+    font-size: 44px;
+  }
+
+  .cta-title {
+    font-size: 64px;
+  }
+}
+
+/* ================================================================
+   BREAKPOINT: LAPTOP / LARGE TABLET  1024px – 1279px
+   ================================================================ */
+@media (max-width: 1023px) {
+  .hero {
+    min-height: 65vh;
+  }
+
+  .hero .interior-text,
+  .hero .design-text {
+    font-size: 90px;
+    line-height: 1;
+  }
+
+  .section-title {
+    font-size: 90px;
+  }
+
+  .about-text h1 {
+    font-size: 38px;
+  }
+
+  .cta-title {
+    font-size: 52px;
+  }
+
+  .testimonials-main-title {
+    font-size: 38px;
+  }
+
+  .nav-menu {
+    gap: 18px;
+  }
+
+  .nav-menu li a {
+    font-size: 12px;
+  }
+
+  .quote-btn {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+}
+
+/* ================================================================
+   BREAKPOINT: TABLET  768px – 1023px
+   ================================================================ */
+@media (max-width: 1023px) and (min-width: 769px) {
+  .logo img {
+    max-width: 140px;
+  }
+
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero .interior-text,
+  .hero .design-text {
+    font-size: 80px;
+  }
+
+  .about-section {
+    gap: 30px;
+    padding: 50px 0;
+  }
+
+  .about-text {
+    flex: 1 1 45%;
+  }
+
+  .about-image {
+    flex: 1 1 45%;
+  }
+
+  .collection-card {
+    flex: 1 1 calc(33% - 16px);
+  }
+
+  .footer-col {
+    flex: 1 1 calc(50% - 32px);
+  }
+}
+
+/* ================================================================
+   BREAKPOINT: MOBILE LANDSCAPE + SMALL TABLET  768px and below
+   ================================================================ */
+@media (max-width: 768px) {
+
+  /* ── Header ── */
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-inner {
+    flex-wrap: nowrap;
+    padding: 0 4px;
+  }
+
+  .logo img {
+    max-width: 130px;
+  }
+
+  /* Hide quote button on small screens (accessible via menu) */
+  .quote-btn {
+    display: none;
+  }
+
+  /* ── Mobile Nav Drawer ── */
+  .nav-menu {
+    position: fixed !important;
+    top: 70px !important;
+    left: -105% !important;
+    width: 82% !important;
+    max-width: 320px !important;
+    height: calc(100dvh - 70px) !important;
+    background: #fff !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+    padding: 24px 0 40px !important;
+    overflow-y: auto !important;
+    transition: left 0.3s ease !important;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.12) !important;
+    z-index: 999 !important;
+  }
+
+  .nav-menu.active {
+    left: 0 !important;
+  }
+
+  .nav-menu > li {
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-menu > li > a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 55vh;
+    align-items: flex-end;
+    padding-bottom: 30px;
+  }
+
+  .hero-content {
+    padding-bottom: 30px;
+  }
+
+  .hero .interior-text,
+  .hero .design-text {
+    font-size: clamp(40px, 12vw, 72px);
+    letter-spacing: -1px;
+  }
+
+  .dynamic-text {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .top-row {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  .btn-ourworks {
+    padding: 10px 16px;
+    font-size: 12px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  /* ── About ── */
+  .about-section {
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 24px;
+  }
+
+  .about-text {
+    padding-right: 0 !important;
+    flex: 1 1 100%;
+  }
+
+  .about-image {
+    flex: 1 1 100%;
+  }
+
+  .about-text h6 {
+    font-size: 20px;
+  }
+
+  .about-text h1 {
+    font-size: clamp(26px, 6vw, 38px);
+  }
+
+  /* ── Section title ── */
+  .section-title {
+    font-size: clamp(36px, 12vw, 72px);
+    margin-bottom: 20px;
+  }
+
+  /* ── Collections ── */
+  .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .collection-card {
+    flex: none;
+  }
+
+  /* ── Approach ── */
+  .approach {
+    flex-direction: column;
+  }
+
+  .approach-card {
+    flex: 1 1 100%;
+    padding: 28px 24px;
+  }
+
+  /* ── Testimonials ── */
+  .testimonials-main-title {
+    font-size: clamp(22px, 5vw, 34px);
+  }
+
+  .testimonial-grid,
+  .testimonial-grid-second {
+    flex-direction: column;
+  }
+
+  .testimonial-item {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  /* ── Footer CTA ── */
+  .cta-title {
+    font-size: clamp(28px, 8vw, 48px);
+    line-height: 1.15;
+  }
+
+  /* ── Footer ── */
+  .footer-grid {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  .copyright {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* ── Map ── */
+  .map-section iframe {
+    height: 280px;
+  }
+
+  /* ── Video wrapper ── */
+  .video-wrapper {
+    margin: 20px 0;
+  }
+
+  /* ── Swiper marquee ── */
+  .swiper-marquee .swiper-slide img {
+    height: 220px;
+  }
+
+  /* ── USP Section ── */
+  .usp-title {
+    font-size: 26px;
+  }
+}
+
+/* ================================================================
+   BREAKPOINT: MOBILE PORTRAIT  480px and below
+   ================================================================ */
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .logo img {
+    max-width: 110px;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 50vh;
+  }
+
+  .hero .interior-text,
+  .hero .design-text {
+    font-size: clamp(34px, 11vw, 52px);
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+
+  .top-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn-ourworks {
+    padding: 9px 14px;
+    font-size: 11px;
+  }
+
+  .dynamic-text {
+    font-size: 13px;
+  }
+
+  /* ── About ── */
+  .about-text h1 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .about-text h6 {
+    font-size: 18px;
+  }
+
+  /* ── Section Title ── */
+  .section-title {
+    font-size: clamp(28px, 10vw, 52px);
+  }
+
+  /* ── Collections — single column on very small ── */
+  .collection-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* ── Testimonials ── */
+  .testimonials-main-title {
+    font-size: 22px;
+  }
+
+  /* ── CTA ── */
+  .cta-title {
+    font-size: 26px;
+  }
+
+  /* ── Footer ── */
+  .footer-main {
+    padding: 40px 0 30px;
+  }
+
+  /* ── Approach ── */
+  .approach-card {
+    padding: 22px 18px;
+  }
+
+  .approach-card h4 {
+    font-size: 20px;
+  }
+
+  .approach-number {
+    font-size: 44px;
+  }
+
+  /* ── Swiper marquee height ── */
+  .swiper-marquee .swiper-slide img {
+    height: 180px;
+  }
+
+  /* ── Map ── */
+  .map-section iframe {
+    height: 240px;
+  }
+
+  /* ── WhatsApp float ── */
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px;
+  }
+
+  .whatsapp-float i {
+    font-size: 24px;
+  }
+}
+
+/* ================================================================
+   BREAKPOINT: VERY SMALL PHONES  360px and below
+   ================================================================ */
+@media (max-width: 360px) {
+  .hero .interior-text,
+  .hero .design-text {
+    font-size: 30px;
+  }
+
+  .about-text h1 {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .cta-title {
+    font-size: 24px;
+  }
+
+  .btn-ourworks {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+}
+
+/* ================================================================
+   SUB-PAGE SHARED FIXES (livingroom, bedroom, dining, kitchen, etc.)
+   ================================================================ */
+
+/* Hero section used on collection sub-pages */
+.hero-section {
+  padding: clamp(80px, 10vw, 140px) clamp(16px, 4vw, 80px) clamp(60px, 8vw, 100px);
+}
+
+/* Gallery grids on sub-pages */
+.fall-grid,
+.gallery-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .fall-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .hero-section {
+    flex-direction: column !important;
+    padding: 100px 20px 60px !important;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100% !important;
+  }
+
+  .left-section {
+    height: 280px !important;
+  }
+
+  .right-section h1 {
+    font-size: clamp(30px, 7vw, 52px) !important;
+  }
+
+  .about-heading h2,
+  .gallery-section h2,
+  .banner-content h1 {
+    font-size: clamp(26px, 6vw, 40px) !important;
+  }
+
+  .fall-title,
+  .rooms-title,
+  .benefits-title {
+    font-size: clamp(22px, 5vw, 34px) !important;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .room-card {
+    min-width: calc(80% - 10px) !important;
+  }
+
+  /* Sub-page section paddings */
+  .about-section,
+  .gallery-section,
+  .fall-section,
+  .benefits-section,
+  .rooms-section,
+  footer {
+    padding: 60px 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .fall-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .left-section {
+    height: 220px !important;
+  }
+}
+
+/* ================================================================
+   PROJECTS PAGE FIXES
+   ================================================================ */
+.projects-grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-card {
+    width: 100% !important;
+  }
+}
+
+/* ================================================================
+   CONTACT PAGE FIXES
+   ================================================================ */
+.contact-form-section,
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .contact-form-section,
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .contact-form-section > *,
+  .contact-grid > * {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+}
+
+/* ================================================================
+   ABOUT PAGE FIXES
+   ================================================================ */
+.team-grid,
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .team-grid > *,
+  .stats-grid > * {
+    flex: 1 1 calc(50% - 24px);
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid,
+  .stats-grid {
+    flex-direction: column;
+  }
+
+  .team-grid > *,
+  .stats-grid > * {
+    flex: 1 1 100%;
+  }
+}
+
+/* ================================================================
+   DESIGN IDEAS PAGE
+   ================================================================ */
+.design-grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (max-width: 1023px) {
+  .design-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .design-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ================================================================
+   MOBILE MENU OVERLAY (tap outside to close)
+   ================================================================ */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+}
+
+.nav-overlay.active {
+  display: block;
+}
+
+/* ================================================================
+   ACCESSIBILITY & MISC
+   ================================================================ */
+
+/* Avoid layout breaks from very long words */
+p, h1, h2, h3, h4, h5, h6, li, a {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Better tap targets on mobile */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .nav-menu > li > a {
+    min-height: 48px;
+  }
+}
+
+/* Smooth swiper on touch */
+.swiper-slide {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure feature lists wrap nicely on small screens */
+@media (max-width: 480px) {
+  .feature-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

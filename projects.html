@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Novelle Interiors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Federo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --cream: #f8f5f0;
+      --gold: #c8a96e;
+      --gold-light: #e8d5b0;
+      --gray: #888;
+      --light-gray: #e5e5e5;
+      --text: #2a2a2a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAVBAR ─── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: #FFFFFF;
+      padding: 15px 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 7px rgba(0,0,0,0);
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 0 7px rgba(0,0,0,0.25);
+      padding: 10px 0;
+    }
+
+    .header-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      max-width: 180px;
+      height: auto;
+      position: relative;
+      top: 10px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-menu li a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13.3px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #211D1A;
+      letter-spacing: 0.1px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li.active a {
+      color: #BF793B;
+    }
+
+    .nav-menu .menu-item-has-children {
+      position: relative;
+    }
+
+    .nav-menu .sub-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 12px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      z-index: 100;
+      list-style: none;
+    }
+
+    .nav-menu .menu-item-has-children:hover > .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-menu .sub-menu li {
+      position: relative;
+    }
+
+    .nav-menu .sub-menu li a {
+      display: block;
+      padding: 8px 20px;
+      color: #333;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu .sub-menu li a:hover {
+      background: #f5f5f5;
+      color: #c6a43b;
+      padding-left: 25px;
+    }
+
+    .nav-menu .sub-menu .menu-item-has-children .sub-menu-level2 {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      min-width: 200px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 12px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu .sub-menu .menu-item-has-children:hover .sub-menu-level2 {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    .nav-menu .fa-chevron-down,
+    .nav-menu .fa-chevron-right {
+      font-size: 12px;
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-menu .menu-item-has-children:hover > a .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+
+    .collections-dropdown {
+      position: relative;
+    }
+
+    .collections-dropdown .sub-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      background: #fff;
+      padding: 18px 0;
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      z-index: 999;
+    }
+
+    .collections-dropdown:hover .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .collections-dropdown .sub-menu li a {
+      display: block;
+      padding: 14px 24px;
+      color: #222;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .collections-dropdown .sub-menu li a:hover {
+      background: #f5f5f5;
+      color: #c58b55;
+      padding-left: 30px;
+    }
+
+    .collections-dropdown > a i {
+      margin-left: 6px;
+      font-size: 12px;
+    }
+
+    .btn-primary {
+      background-color: #000000;
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      padding: 15px 30px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: all 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #402F21;
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* ─── HERO SECTION ─── */
+    .hero {
+      min-height: 58vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 64px;
+      padding-top: 80px;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(80px, 14vw, 200px);
+      font-weight: 300;
+      color: rgba(0,0,0,0.04);
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: 0.1em;
+      user-select: none;
+    }
+    .hero-tag {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 7rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--black);
+      text-align: center;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.4s forwards;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      max-width: 520px;
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.7;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.6s forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── FILTER BAR ─── */
+    .filter-section {
+      padding: 48px 64px 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .filter-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-right: 8px;
+    }
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--light-gray);
+      padding: 8px 22px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+    }
+
+    /* ─── PROJECTS GRID ─── */
+    .projects-section {
+      padding: 0 40px 80px;
+    }
+
+    .projects-grid {
+      columns: 3;
+      column-gap: 20px;
+    }
+
+    .project-card {
+      break-inside: avoid;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.3s ease;
+    }
+    .project-card.hidden {
+      display: none;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background-color: #e0dcd5;
+    }
+    .project-card:hover img { transform: scale(1.05); }
+
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0) 55%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+      pointer-events: none;
+    }
+    .project-card:hover .project-overlay { opacity: 1; }
+
+    .project-category {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      transform: translateY(10px);
+      transition: transform 0.4s ease 0.05s;
+    }
+    .project-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: white;
+      line-height: 1.2;
+      transform: translateY(10px);
+      transition: transform 0.4s ease 0.1s;
+    }
+    .project-arrow {
+      position: absolute;
+      top: 24px; right: 24px;
+      width: 38px; height: 38px;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+      font-size: 1rem;
+      opacity: 0;
+      transform: scale(0.7);
+      transition: all 0.3s ease 0.15s;
+      pointer-events: none;
+    }
+    .project-card:hover .project-category,
+    .project-card:hover .project-name { transform: translateY(0); }
+    .project-card:hover .project-arrow { opacity: 1; transform: scale(1); }
+
+    .project-link {
+      text-decoration: none;
+      display: block;
+      position: relative;
+    }
+
+    /* ─── SECTION HEADING ─── */
+    .section-heading {
+      padding: 0 64px 40px;
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+    }
+    .section-heading h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      color: var(--black);
+    }
+    .section-heading .line {
+      flex: 1;
+      height: 1px;
+      background: var(--light-gray);
+      align-self: center;
+    }
+
+    /* ─── CTA SECTION ─── */
+    .cta-section {
+      background: var(--black);
+      padding: 90px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .cta-left h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 300;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .cta-left p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      max-width: 400px;
+      line-height: 1.7;
+    }
+    .cta-right { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+    .cta-btn {
+      display: inline-block;
+      padding: 16px 40px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+      z-index: 0;
+    }
+    .cta-btn:hover { color: var(--black); }
+    .cta-btn:hover::before { transform: scaleX(1); }
+    .cta-btn span { position: relative; z-index: 1; }
+
+    /* ─── FOOTER ─── */
+    .footer-main {
+      background-color: #211D1A;
+      color: #fff;
+      padding: 60px 200px 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .footer-logo img {
+      filter: invert(1);
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.15px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul li a {
+      color: #ddd;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .footer-col ul li a:hover {
+      color: #BF793B;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .copyright {
+      border-top: 1px dashed #402F21;
+      padding-top: 30px;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #000;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 99;
+      cursor: pointer;
+      transition: all 0.2s;
+      animation: floatWhatsapp 2s ease-in-out infinite;
+    }
+
+    .whatsapp-float i {
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #402F21;
+      transform: scale(1.05);
+    }
+
+    @keyframes floatWhatsapp {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @media (max-width: 1024px) {
+      .projects-grid { columns: 2; }
+    }
+    @media (max-width: 992px) {
+      .menu-toggle { display: block; }
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #fff;
+        width: 80%;
+        height: calc(100% - 80px);
+        flex-direction: column;
+        padding: 40px 20px;
+        transition: 0.3s;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        z-index: 99;
+        overflow-y: auto;
+        gap: 15px;
+      }
+      .nav-menu.active { left: 0; }
+      .nav-menu .sub-menu,
+      .nav-menu .sub-menu .menu-item-has-children .sub-menu-level2 {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        background: transparent;
+      }
+      .nav-menu .menu-item-has-children.active-dropdown > .sub-menu { display: block; }
+      .collections-dropdown .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        display: none;
+        padding: 0;
+      }
+      .collections-dropdown.active .sub-menu { display: block; }
+    }
+    @media (max-width: 768px) {
+      .projects-grid { columns: 1; }
+      .filter-section, .section-heading { padding: 28px 20px; }
+      .projects-section { padding: 0 16px 60px; }
+      .cta-section { padding: 60px 24px; }
+      .footer-main { padding: 40px 24px; }
+      .footer-grid { flex-direction: column; }
+      .copyright { flex-direction: column; gap: 15px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="mainHeader">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="assets/logo.jpg" alt="Novelle Interiors Logo" onerror="this.src='https://placehold.co/180x60?text=Novelle'">
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="design.html">Design Ideas</a></li>
+        <li class="menu-item-has-children collections-dropdown">
+          <a href="collections.html">Collections <i class="fas fa-chevron-down"></i></a>
+          <ul class="sub-menu collections-menu">
+            <li><a href="livingroom.html">Living</a></li>
+            <li><a href="bedroom.html">Bedroom</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="kitchen.html">Kitchen</a></li>
+            <li><a href="accents.html">Accent</a></li>
+          </ul>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="projects.html">Projects <i class="fas fa-chevron-down"></i></a>
+          <ul class="sub-menu">
+            <li class="menu-item-has-children"><a href="#">The Opulent Oasis <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="#">Architecture</a></li><li><a href="#">Interior Design</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/dsr.html">DSR Farmhouse <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/dsr.html">Architecture</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/ciro.html">CIRO Pharma <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/ciro.html">Architecture</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="alais.html">Alais Home Solutions <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="alais.html">Interior Design</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/manor.html">Modern Manor <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/manor.html">Interior Design</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/slate.html">The Slate House <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/slate.html">Architecture</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/panacea.html">Panacea Hospital Design <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/panacea.html">Exterior Design</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/blues.html">The Design Blues <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/blues.html">Interior Design</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/harmony.html">The Harmony Home <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/harmony.html">Interior Design</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/farmhouse.html">Bhaskaram Farmhouse <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/farmhouse.html">Architecture</a></li><li><a href="projects/farmhouse.html">Interior Design</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/dsrhosp.html">DSR Charitable Hospitals <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/dsrhosp.html">Architecture</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/min.html">Minimal Charm <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/min.html">Interior Design</a></li></ul>
+            </li>
+            <li class="menu-item-has-children"><a href="projects/aiva.html">Hotel Aiva Gachibowli <i class="fas fa-chevron-right"></i></a>
+              <ul class="sub-menu sub-menu-level2"><li><a href="projects/aiva.html">Architecture</a></li><li><a href="projects/aiva.html">Interior Design</a></li></ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" class="btn-primary quote-btn" id="openQuoteBtn">Get a quote</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg-text">PORTFOLIO</div>
+    <span class="hero-tag">Our Creative Journey</span>
+    <h1 class="hero-title"><em>Projects</em></h1>
+    <div class="hero-sub">A curated selection of residential, commercial, and healthcare interiors crafted with intention and elegance.</div>
+  </section>
+
+  <div class="filter-section">
+    <span class="filter-label">Filter By</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="residential">Residential</button>
+    <button class="filter-btn" data-filter="commercial">Commercial</button>
+    <button class="filter-btn" data-filter="interior">Interior Design</button>
+    <button class="filter-btn" data-filter="healthcare">Health Care</button>
+    <button class="filter-btn" data-filter="hospitality">Hospitality</button>
+  </div>
+
+  <div class="section-heading">
+    <h2>Featured Works</h2>
+    <div class="line"></div>
+  </div>
+
+  <section class="projects-section">
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card" data-cat="residential"><a href="#" class="project-link"><img src="assets/project1.jpg" alt="Fusion Retreat" loading="lazy"><div class="project-overlay"><span class="project-category">Residential / Villa</span><h3 class="project-name">Fusion Retreat</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="residential"><a href="projects/dsr.html" class="project-link"><img src="https://www.oneeast.in/wp-content/uploads/2024/10/1.jpg" alt="DSR Farmhouse" loading="lazy"><div class="project-overlay"><span class="project-category">Residential / Farmhouse</span><h3 class="project-name">DSR Farmhouse</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="residential"><a href="projects/slate.html" class="project-link"><img src="assets/slate3.png" alt="The Slate House" loading="lazy"><div class="project-overlay"><span class="project-category">Residential / Modern</span><h3 class="project-name">The Slate House</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="residential"><a href="projects/farmhouse.html" class="project-link"><img src="https://www.oneeast.in/wp-content/uploads/2025/05/Exterior-006.jpg" alt="Bhaskaram Farmhouse" loading="lazy"><div class="project-overlay"><span class="project-category">Residential / Estate</span><h3 class="project-name">Bhaskaram Farmhouse</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="commercial"><a href="projects/ciro.html" class="project-link"><img src="assets/Ciro-Pharma.jpg" alt="CIRO Pharma" loading="lazy"><div class="project-overlay"><span class="project-category">Commercial / Corporate</span><h3 class="project-name">CIRO Pharma</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="commercial"><a href="alais.html" class="project-link"><img src="assets/alais.jpg" alt="Alais Home Solutions" loading="lazy"><div class="project-overlay"><span class="project-category">Commercial / Office</span><h3 class="project-name">Alais Home Solutions</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="interior"><a href="projects/manor.html" class="project-link"><img src="assets/manor.jpg" alt="Modern Manor" loading="lazy"><div class="project-overlay"><span class="project-category">Interior Design / Luxury</span><h3 class="project-name">Modern Manor</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="interior"><a href="projects/harmony.html" class="project-link"><img src="assets/harmonypic.jpg" alt="The Harmony Home" loading="lazy"><div class="project-overlay"><span class="project-category">Interior Design / Contemporary</span><h3 class="project-name">The Harmony Home</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="interior"><a href="projects/blues.html" class="project-link"><img src="assets/designblues.jpg" alt="The Design Blues" loading="lazy"><div class="project-overlay"><span class="project-category">Interior Design / Artistic</span><h3 class="project-name">The Design Blues</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="interior"><a href="projects/min.html" class="project-link"><img src="https://www.oneeast.in/wp-content/uploads/2025/06/Pooja-001-copy-1.jpgs" alt="Minimal Charm" loading="lazy"><div class="project-overlay"><span class="project-category">Interior Design / Minimalist</span><h3 class="project-name">Minimal Charm</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="hospitality"><a href="projects/aiva.html" class="project-link"><img src="assets/aiva2.png" alt="Hotel Aiva Gachibowli" loading="lazy"><div class="project-overlay"><span class="project-category">Hospitality / Boutique Hotel</span><h3 class="project-name">Hotel Aiva Gachibowli</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="healthcare"><a href="projects/panacea.html" class="project-link"><img src="assets/panacea.jpg" alt="Panacea Hospital Design" loading="lazy"><div class="project-overlay"><span class="project-category">Health Care / Hospital</span><h3 class="project-name">Panacea Hospital Design</h3></div><div class="project-arrow">→</div></a></div>
+      <div class="project-card" data-cat="healthcare"><a href="projects/dsrhosp.html" class="project-link"><img src="https://www.oneeast.in/wp-content/uploads/2025/06/OperationRoom.jpg" alt="DSR Charitable Hospitals" loading="lazy"><div class="project-overlay"><span class="project-category">Health Care / Charity Hospital</span><h3 class="project-name">DSR Charitable Hospitals</h3></div><div class="project-arrow">→</div></a></div>
+    </div>
+  </section>
+
+  <div class="cta-section">
+    <div class="cta-left"><h2>Let's shape your<br>next chapter</h2><p>Whether you envision a tranquil home, a dynamic workspace, or a healing ensvironment, our team brings your story to life.</p></div>
+    <div class="cta-right"><a href="contact.html" class="cta-btn"><span>Start a Project</span></a><a href="tel:+1234567890" class="cta-btn" style="border-color: #fff; color:#fff;"><span>Call Studio</span></a></div>
+  </div>
+
+  <footer class="footer-main">
+    <div class="footer-grid">
+      <div class="footer-col footer-logo"><img src="assets/logo.jpg" alt="Novelle Interiors" onerror="this.src='https://placehold.co/160x50?text=Novelle'"><p style="margin-top:20px; font-size:13px; color:#ccc;">Interior architecture & design studio crafting timeless spaces since 2012.</p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="projects.html">Projects</a></li><li><a href="collections.html">Collections</a></li><li><a href="design.html">Design Ideas</a></li><li><a href="about.html">Studio</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li></ul><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-pinterest"></i></a></div></div>
+    </div>
+    <div class="copyright"><span>© 2025 Novelle Interiors — All rights reserved.</span><span>Privacy Policy / Terms</span></div>
+  </footer>
+
+  <div class="whatsapp-float" id="whatsappBtn"><i class="fab fa-whatsapp"></i></div>
+
+  <script>
+    // Navbar scroll effect
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    }
+
+    // Mobile dropdowns
+    if (window.innerWidth <= 992) {
+      document.querySelectorAll('.menu-item-has-children > a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          link.parentElement.classList.toggle('active-dropdown');
+        });
+      });
+    }
+
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+
+    function filterProjects(category) {
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-cat');
+        if (category === 'all' || cardCat === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filterValue = btn.getAttribute('data-filter');
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterProjects(filterValue);
+      });
+    });
+
+    // Quote and WhatsApp buttons
+    document.getElementById('whatsappBtn')?.addEventListener('click', () => window.open('https://wa.me/1234567890', '_blank'));
+    document.getElementById('openQuoteBtn')?.addEventListener('click', (e) => { e.preventDefault(); alert('Get a quote form would open here.'); });
+  </script>
+</body>
+</html>

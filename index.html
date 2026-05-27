@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Novelle Interiors</title>
+    <meta name="description"
+        content="Novelle Interiors, the best interior designers in Hyderabad, specializing in transforming spaces with innovative designs and exceptional quality.">
+    <link rel="canonical" href="https://lhinteriors.in/">
+
+    <!-- Preconnect and Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Federo&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header" id="mainHeader">
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="Novelle Interiors Logo">
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu" id="navMenu">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="design.html">Design Ideas</a></li>
+                <li class="menu-item-has-children collections-dropdown">
+                    <a href="collections.html">
+                        Collections <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="sub-menu collections-menu">
+                        <li><a href="livingroom.html">Living</a></li>
+                        <li><a href="bedroom.html">Bedroom</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="kitchen.html">Kitchen</a></li>
+                        <li><a href="accents.html">Accent</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="projects.html">Projects <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sub-menu">
+                        <li class="menu-item-has-children">
+                            <a href="#">The Opulent Oasis <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="#">Architecture</a></li>
+                                <li><a href="#">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/dsr.html">DSR Farmhouse <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/dsr.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/ciro.html">CIRO Pharma <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/ciro.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="alais.html">Alais Home Solutions <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="alais.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/manor.html">Modern Manor <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/manor.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">The Slate House <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="#">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/panacea.html">Panacea Hospital Design <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/panacea.html">Exterior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/blues.html">The Design Blues <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/blues.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/harmony.html">The Harmony Home <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/harmony.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/farmhouse.html">Bhaskaram Farmhouse <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/farmhouse.html">Architecture</a></li>
+                                <li><a href="projects/farmhouse.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/dsrhosp.html">DSR Charitable Hospitals <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/dsrhosp.html">Architecture</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/min.html">Minimal Charm <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/min.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="projects/aiva.html">Hotel Aiva Gachibowli <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-menu sub-menu-level2">
+                                <li><a href="projects/aiva.html">Architecture</a></li>
+                                <li><a href="projects/aiva.html">Interior Design</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#" class="btn-primary quote-btn" id="openQuoteBtn">Get a quote</a>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main id="content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+
+                <div class="top-row">
+                    <h2 class="interior-text">Interior</h2>
+
+                    <a href="collections.html" class="btn-primary btn-ourworks">
+                        Our Works
+                    </a>
+                </div>
+
+                <div class="dynamic-text" id="dynamicText">
+                    Modern · Luxury · Functional
+                </div>
+
+                <h2 class="design-text">Design</h2>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <div class="container">
+            <div class="about-section">
+                <div class="about-text reveal-left">
+                    <h6>Why Choose Novelle Interiors?</h6>
+                    <h1>Elevate Your Home with the Best Interior Designers in Hyderabad</h1>
+                    <p>Novelle Interiors is dedicated to realizing our vision of becoming the best interior designers in
+                        Hyderabad, recognized globally for our innovative, sustainable, and personalized design
+                        solutions. We continually strive to push the boundaries of design and technology, crafting
+                        spaces that not only meet but exceed the expectations of our clients. As trusted house interior
+                        designers, we are committed to excellence in every project.</p>
+                    <div class="feature-list">
+                        <div class="feature-col">
+                            <ul>
+                                <li>Ideation and Conceptualization</li>
+                                <li>Thorough Site Assessment</li>
+                                <li>Creative Design Evolution</li>
+                                <li>Strategic Space Arrangement</li>
+                                <li>Tailored Furniture Crafting</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-col">
+                            <ul>
+                                <li>Expert Design Consultation</li>
+                                <li>Curated Material Selection</li>
+                                <li>Skilled Contract Management</li>
+                                <li>Precision Architectural Sketches</li>
+                                <li>Artful Lighting Solutions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal-right">
+                    <img src="https://lhinteriors.in/wp-content/uploads/2024/04/35-1.jpg" alt="Interior Designer">
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote Modal Overlay -->
+        <div class="quote-modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-label="Get a quote">
+            <div class="quote-modal">
+                <button class="quote-modal-close" id="closeQuoteBtn" aria-label="Close">&times;</button>
+                <div class="quote-modal-left">
+                    <img src="https://lhinteriors.in/wp-content/uploads/2024/04/dining-room-services3.webp"
+                        alt="Luxury Interior">
+                </div>
+                <div class="quote-modal-right">
+                    <h2>Get a quote</h2>
+                    <div class="quote-form">
+                        <input type="text" id="q-name" placeholder="Name" autocomplete="name">
+                        <input type="tel" id="q-phone" placeholder="Phone Number" autocomplete="tel">
+                        <input type="email" id="q-email" placeholder="Email" autocomplete="email">
+                        <input type="text" id="q-budget" placeholder="Budget">
+                        <textarea id="q-message" placeholder="Message" rows="4"></textarea>
+                        <button class="quote-send-btn" id="quoteSendBtn">SEND</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            /* ---- Quote Modal ---- */
+            .quote-modal-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.65);
+                z-index: 9999;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            .quote-modal-overlay.active {
+                display: flex;
+            }
+
+            .quote-modal {
+                display: flex;
+                background: #fff;
+                border-radius: 4px;
+                overflow: hidden;
+                width: 100%;
+                max-width: 860px;
+                max-height: 90vh;
+                position: relative;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            }
+
+            .quote-modal-close {
+                position: absolute;
+                top: 14px;
+                right: 18px;
+                background: none;
+                border: none;
+                font-size: 28px;
+                line-height: 1;
+                cursor: pointer;
+                color: #222;
+                z-index: 10;
+                padding: 0;
+                font-family: inherit;
+            }
+
+            .quote-modal-close:hover {
+                color: #000;
+            }
+
+            .quote-modal-left {
+                width: 42%;
+                flex-shrink: 0;
+                overflow: hidden;
+            }
+
+            .quote-modal-left img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .quote-modal-right {
+                flex: 1;
+                padding: 48px 40px 40px;
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+            }
+
+            .quote-modal-right h2 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 36px;
+                font-weight: 700;
+                color: #111;
+                margin: 0 0 28px;
+                line-height: 1.2;
+            }
+
+            .quote-form {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .quote-form input,
+            .quote-form textarea {
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                padding: 14px 16px;
+                font-size: 14px;
+                font-family: 'Open Sans', sans-serif;
+                color: #333;
+                outline: none;
+                background: #fff;
+                box-sizing: border-box;
+                transition: border-color 0.2s;
+            }
+
+            .quote-form input::placeholder,
+            .quote-form textarea::placeholder {
+                color: #aaa;
+            }
+
+            .quote-form input:focus,
+            .quote-form textarea:focus {
+                border-color: #888;
+            }
+
+            .quote-form textarea {
+                resize: none;
+            }
+
+            .quote-send-btn {
+                width: 100%;
+                background: #111;
+                color: #fff;
+                border: none;
+                padding: 16px;
+                font-size: 14px;
+                font-weight: 700;
+                font-family: 'Montserrat', sans-serif;
+                letter-spacing: 1.5px;
+                cursor: pointer;
+                border-radius: 3px;
+                transition: background 0.2s;
+                margin-top: 4px;
+            }
+
+            .quote-send-btn:hover {
+                background: #333;
+            }
+
+            /* Responsive */
+            @media (max-width: 640px) {
+                .quote-modal {
+                    flex-direction: column;
+                    max-height: 95vh;
+                }
+
+                .quote-modal-left {
+                    width: 100%;
+                    height: 180px;
+                }
+
+                .quote-modal-right {
+                    padding: 30px 24px 28px;
+                }
+
+                .quote-modal-right h2 {
+                    font-size: 26px;
+                    margin-bottom: 20px;
+                }
+            }
+        </style>
+
+
+
+        <script>
+            // Quote Modal Logic
+            const openQuoteBtn = document.getElementById('openQuoteBtn');
+            const quoteModal = document.getElementById('quoteModal');
+            const closeQuoteBtn = document.getElementById('closeQuoteBtn');
+            const quoteSendBtn = document.getElementById('quoteSendBtn');
+
+            function openModal() {
+                quoteModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                quoteModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (openQuoteBtn) openQuoteBtn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+            if (closeQuoteBtn) closeQuoteBtn.addEventListener('click', closeModal);
+
+
+            quoteModal.addEventListener('click', function (e) {
+                if (e.target === quoteModal) closeModal();
+            });
+
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && quoteModal.classList.contains('active')) closeModal();
+            });
+
+            // Send button 
+            if (quoteSendBtn) {
+                quoteSendBtn.addEventListener('click', function () {
+                    const name = document.getElementById('q-name').value.trim();
+                    const phone = document.getElementById('q-phone').value.trim();
+                    const email = document.getElementById('q-email').value.trim();
+                    const budget = document.getElementById('q-budget').value.trim();
+                    const msg = document.getElementById('q-message').value.trim();
+
+                    if (!name || !phone || !email) {
+                        alert('Please fill in Name, Phone, and Email.');
+                        return;
+                    }
+
+
+                    console.log({ name, phone, email, budget, msg });
+                    alert('Thank you! We will get back to you shortly.');
+                    closeModal();
+                });
+            }
+        </script>
+        <!-- Marquee Carousel -->
+        <div class="carousel-section">
+            <div class="swiper swiper-marquee">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/06/kitchen-e.webp" alt="Kitchen"></div>
+                    <div class="swiper-slide"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/05/living-space-3.webp" alt="Living">
+                    </div>
+                    <div class="swiper-slide"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/06/kitchcen-c.webp" alt="Kitchen"></div>
+                    <div class="swiper-slide"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/06/bedroom-b.webp" alt="Bedroom"></div>
+                    <div class="swiper-slide"><img src="https://lhinteriors.in/wp-content/uploads/2024/06/accent-e.webp"
+                            alt="Accent"></div>
+                    <div class="swiper-slide"><img src="https://lhinteriors.in/wp-content/uploads/2024/06/living-c.webp"
+                            alt="Living"></div>
+                    <div class="swiper-slide"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/05/kitchen-2.webp" alt="Kitchen"></div>
+                    <div class="swiper-slide"><img src="https://lhinteriors.in/wp-content/uploads/2024/06/dining-c.webp"
+                            alt="Dining"></div>
+                    <div class="swiper-slide"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/07/new-images-lhinterior-home-9.webp"
+                            alt="Home"></div>
+                    <div class="swiper-slide"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/07/new-images-lhinterior-home-6.webp"
+                            alt="Study"></div>
+                    <div class="swiper-slide"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/07/new-images-lhinterior-home-1.webp"
+                            alt="Living"></div>
+                    <div class="swiper-slide"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/07/new-images-lhinterior-home-2.webp"
+                            alt="Dining"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collections -->
+        <div class="container collections">
+            <div class="section-title">Collections</div>
+            <div class="collection-grid">
+                <div class="collection-card reveal"><a href="#"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/04/living-service2.webp" alt="Living">
+                        <h4>LIVING</h4>
+                    </a></div>
+                <div class="collection-card reveal"><a href="#"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/04/bedroom-lh-service1.webp"
+                            alt="Bedroom">
+                        <h4>BEDROOM</h4>
+                    </a></div>
+                <div class="collection-card reveal"><a href="#"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/04/dining-room-services3.webp"
+                            alt="Dining">
+                        <h4>DINING</h4>
+                    </a></div>
+                <div class="collection-card reveal"><a href="#"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/04/kitchen-service4.webp" alt="Kitchen">
+                        <h4>KITCHEN</h4>
+                    </a></div>
+                <div class="collection-card reveal"><a href="#"><img
+                            src="https://lhinteriors.in/wp-content/uploads/2024/04/accent-services5.webp" alt="Accent">
+                        <h4>ACCENT</h4>
+                    </a></div>
+            </div>
+        </div>
+
+        <!-- Video Showcase -->
+        <div class="container">
+            <div class="video-wrapper">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/NoWyNgAQe34"
+                    title="Novelle Interiors Showcase" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Approach Steps -->
+        <div class="container">
+            <div class="approach">
+                <div class="approach-card reveal-zoom reveal">
+                    <h4>Initial Consultation</h4>
+                    <p>We start by meeting with the client to understand their vision and preferences. This includes
+                        identifying specific needs and style preferences. We then finalize a budget that aligns with
+                        their financial plan and project scope.</p>
+                    <div class="approach-number">01</div>
+                </div>
+                <div class="approach-card reveal-zoom reveal">
+                    <h4>Planning and Design</h4>
+                    <p>Our team conducts a detailed site inspection to evaluate the space and any potential challenges.
+                        We create a comprehensive design plan, including layout, color schemes, and materials selection,
+                        ensuring high-quality choices that fit the client's budget.</p>
+                    <div class="approach-number">02</div>
+                </div>
+                <div class="approach-card reveal-zoom reveal">
+                    <h4>Execution and Handover</h4>
+                    <p>Our skilled team meticulously executes the design plan, focusing on every detail. Upon
+                        completion, we conduct a final walkthrough with the client to ensure complete satisfaction
+                        before handing over the beautifully finished space.</p>
+                    <div class="approach-number">03</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- USP Carousel -->
+        <div class="usp-section reveal">
+            <div class="container">
+                <h2 class="usp-title">USP - Novelle Interiors</h2>
+                <div class="swiper usp-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="usp-icon"><img
+                                    src="https://lhinteriors.in/wp-content/uploads/2024/08/completed-task-lhi.png"
+                                    alt="Complete Home"></div>
+                            <div class="usp-card-title">Complete Home Interiors <br>by Our Own Team</div>
+                            <p>We handle everything from start to finish, with no outside vendors.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="usp-icon"><img
+                                    src="https://lhinteriors.in/wp-content/uploads/2024/08/woodworking-lhi.png"
+                                    alt="Custom Woodwork"></div>
+                            <div class="usp-card-title">Custom <br>Woodwork</div>
+                            <p>Get fully customized designs made in our own factory, just the way you want.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="usp-icon"><img
+                                    src="https://lhinteriors.in/wp-content/uploads/2024/08/assurance-lhi.png"
+                                    alt="Clear Pricing"></div>
+                            <div class="usp-card-title">Clear Pricing & <br>Quality Materials</div>
+                            <p>We believe in being honest about prices and the materials we use, so you know exactly
+                                what you're paying for.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="usp-icon"><img
+                                    src="https://lhinteriors.in/wp-content/uploads/2024/08/on-time-lhi.png"
+                                    alt="On-Time Delivery"></div>
+                            <div class="usp-card-title">On-Time Delivery <br>with Quality Checks</div>
+                            <p>We promise to finish your project on time, with careful quality checks at every step.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="usp-icon"><img
+                                    src="https://lhinteriors.in/wp-content/uploads/2024/08/gear-lhi.png"
+                                    alt="Lifetime Support"></div>
+                            <div class="usp-card-title">Lifetime <br>Support</div>
+                            <p>After we hand over your home, our service continues for a lifetime, ensuring everything
+                                stays perfect.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="container testimonials">
+            <h2 class="testimonials-main-title">Happy Customers With Our Interior Designer Services</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-item reveal">
+                    <div class="testimonial-text">"Extremely happy with the quality and on-time delivery of the work
+                        done by the team.The attention to details from the CEO Mr. Isaaq by checking each and every
+                        corner of the house is outstanding. If you are looking for quality work in budget, Novelle
+                        Interiors is the place for you."</div>
+                    <div class="testimonial-author"><img class="author-img"
+                            src="https://lhinteriors.in/wp-content/uploads/2024/07/Suman.jpg" alt="Suman">
+                        <div><strong>Suman Choudhary</strong><br>Hyderabad, TG.</div>
+                    </div>
+                </div>
+                <div class="testimonial-item reveal">
+                    <div class="testimonial-text">"We checked with almost all the interiors and told our requirements.
+                        But we got best response from Novelle Interiors. Novelle Interiors is one of the best interior
+                        design firms, the best part is that they give you affordable prices for the work.On time
+                        services with perfection. We are very happy and satisfied with the quality and designs."</div>
+                    <div class="testimonial-author"><img class="author-img"
+                            src="https://lhinteriors.in/wp-content/uploads/2024/07/balu-ram.jpg" alt="Balu">
+                        <div><strong>Balu Ram</strong><br>Hyderabad, TG.</div>
+                    </div>
+                </div>
+                <div class="testimonial-item reveal">
+                    <div class="testimonial-text">"LH did a fabulous interior for our home . Thanks to the team led by
+                        Imran& Ishaq ,we got what we expected and they were very cordial and understanding for any minor
+                        changes or modifications. The team provided valuable suggestions and inputs which were very
+                        helpful, Workmanship is good."</div>
+                    <div class="testimonial-author"><img class="author-img"
+                            src="https://lhinteriors.in/wp-content/uploads/2024/08/SankaraNarayanan-Vasudevan.jpg"
+                            alt="Sankara">
+                        <div><strong>SankaraNarayanan Vasudevan</strong><br>Hyderabad, TG.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Testimonials Row -->
+        <div class="container testimonial-grid-second" style="margin-top: 30px;">
+            <div class="testimonial-item reveal">
+                <div class="testimonial-text">"We loved working with Novelle Interiors and team and would highly
+                    recommend anyone looking for an interior designer who brings creativity but designs something that
+                    fits you and your style in your budget. The material used is of good quality and they completed the
+                    work on time."</div>
+                <div class="testimonial-author"><img class="author-img"
+                        src="https://lhinteriors.in/wp-content/uploads/2024/07/priti-tiwary.jpg" alt="Priti">
+                    <div><strong>Priti Tiwary</strong><br>Hyderabad, TG.</div>
+                </div>
+            </div>
+            <div class="testimonial-item reveal">
+                <div class="testimonial-text">"We had a great experience working with Novelle Interiors. The team was
+                    extremely transparent and responsive throughout the entire process, which made coordination very
+                    smooth. They strictly adhered to the agreed timelines. Highly recommended."</div>
+                <div class="testimonial-author"><img class="author-img"
+                        src="https://lhinteriors.in/wp-content/uploads/2026/02/unnamed-2.png" alt="Yellumahanthi">
+                    <div><strong>Yellumahanthi Ganesh Patro</strong><br>Hyderabad, TG.</div>
+                </div>
+            </div>
+            <div class="testimonial-item reveal">
+                <div class="testimonial-text">"Our experience with Novelle Interiors was outstanding from start to
+                    finish. The Novelle Interiors team delivered our project on time, meeting the promised deadline.
+                    We're thoroughly satisfied with the outcome and appreciate the exceptional service provided."</div>
+                <div class="testimonial-author"><img class="author-img"
+                        src="https://lhinteriors.in/wp-content/uploads/2026/02/unnamed.png" alt="Pritish">
+                    <div><strong>Pritish Bellary</strong><br>Hyderabad, TG.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer CTA -->
+    <div class="footer-cta reveal">
+        <div class="container">
+            <h2 class="cta-title">Have a project in<br>mind?</h2>
+            <p class="cta-text">Ready to transform your space? Let's turn your vision into reality. Contact us<br> now
+                to
+                discuss your interior design project and bring your ideas to life!</p>
+            <a href="#" class="contactus">Contact Us <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><img src="assets/logo.jpg" alt="Novelle Interiors"></div>
+                    <p>Novelle Interiors helps people create beautiful interiors with the utmost quality. With nearly 14
+                        years of experience in the interior design industry.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="livingroom.html">Living</a></li>
+                        <li><a href="bedroom.html">Bedroom</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="kitchen.html">Kitchen</a></li>
+                        <li><a href="accents.html">Accent</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Refer a friend</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Customer reviews</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Office</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Plotno.216, Kantivanam Colony, Kondapur, Hyderabad,
+                        Telangana 500084</p>
+                    <p><i class="far fa-envelope-open"></i> <a href="mailto:sales@Novelle Interiors.in">sales@Novelle
+                            Interiors.in</a></p>
+                    <p><i class="fas fa-phone-alt"></i> +91 90004 77756</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2025 Novelle Interiors. All Rights Reserved. Designed by Techvint.</p>
+                <div><a href="#">Privacy Policies</a> | <a href="#">Terms and Conditions</a></div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // SCROLL REVEAL ANIMATION
+
+        function revealElements() {
+            const reveals = document.querySelectorAll(
+                '.reveal, .reveal-left, .reveal-right, .reveal-zoom'
+            );
+
+            reveals.forEach((element) => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const revealPoint = 120;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealElements);
+
+        // Trigger on page load
+        revealElements();
+    </script>
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" id="whatsappBtn">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
