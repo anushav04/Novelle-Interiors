@@ -19,14 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     // Collections Mobile Dropdown
+// Collections Mobile Dropdown
 const collectionsDropdown = document.querySelector('.collections-dropdown');
 
 if (collectionsDropdown) {
-    collectionsDropdown.addEventListener('click', function (e) {
-
+    const dropdownLink = collectionsDropdown.querySelector('> a');
+    dropdownLink.addEventListener('click', function (e) {
         if (window.innerWidth <= 991) {
             e.preventDefault();
-            this.classList.toggle('active');
+            this.parentElement.classList.toggle('active');
+            // DON'T close the menu here
         }
     });
 }
@@ -82,13 +84,23 @@ if (navOverlay) {
     navOverlay.addEventListener('click', closeMobileMenu);
 }
 
-// Close menu when clicking a link
+// Close menu only for REAL navigation links, NOT for dropdown toggles
 document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) closeMobileMenu();
+    link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            // Check if this is a dropdown parent link
+            const parentLi = link.closest('.menu-item-has-children');
+            const isDropdownToggle = parentLi !== null;
+            
+            // If it's NOT a dropdown toggle, close the menu
+            if (!isDropdownToggle) {
+                closeMobileMenu();
+            }
+            // For dropdown toggles, let the dropdown handler work
+            // Don't close the menu
+        }
     });
 });
-
 // Marquee Carousel (infinite scroll)
 const marqueeSwiper = new Swiper('.swiper-marquee', {
     slidesPerView: 3,
